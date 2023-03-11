@@ -2,7 +2,9 @@
   "name": "dan",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "serve": "nx run wanieldeiss:serve:development"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~15.2.0",

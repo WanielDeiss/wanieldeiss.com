@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'dan-root',
+  selector: 'wd-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

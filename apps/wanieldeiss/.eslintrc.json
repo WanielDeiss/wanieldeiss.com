@@ -9,7 +9,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "dan",
+            "prefix": "wd",
             "style": "camelCase"
           }
         ],
@@ -17,8 +17,14 @@
           "error",
           {
             "type": "element",
-            "prefix": "dan",
+            "prefix": "wd",
             "style": "kebab-case"
+          }
+        ],
+        "@angular-eslint/component-class-suffix": [
+          "error",
+          {
+            "suffixes": ["Component", "Page", "Dialog", "Modal"]
           }
         ]
       },
