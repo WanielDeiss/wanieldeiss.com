@@ -1,0 +1,57 @@
+[
+  {
+    "companyName": "Grollmus München GmbH",
+    "positions": [
+      {
+        "name": "Senior Developer - eLearning",
+        "from": "2022-07-01",
+        "isPresent": true
+      },
+      {
+        "name": "Senior Developer - Tia Selection Tool",
+        "from": "2020-01-01",
+        "to": "2022-06-30"
+      },
+      {
+        "name": "Developer",
+        "from": "2018-08-01",
+        "to": "2019-12-31"
+      }
+    ]
+  },
+  {
+    "companyName": "SPIEGLHOF media GmbH",
+    "positions": [
+      {
+        "name": "Head of Web Development",
+        "from": "2016-03-01",
+        "to": "2018-07-31"
+      }
+    ]
+  },
+  {
+    "companyName": "dieFIT AG",
+    "positions": [
+      {
+        "name": "Senior Developer",
+        "from": "2015-09-01",
+        "to": "2016-02-29"
+      },
+      {
+        "name": "Developer",
+        "from": "2013-06-01",
+        "to": "2015-08-31"
+      }
+    ]
+  },
+  {
+    "companyName": "SnipClip GmbH",
+    "positions": [
+      {
+        "name": "Junior Developer",
+        "from": "2012-06-01",
+        "to": "2013-05-31"
+      }
+    ]
+  }
+]
