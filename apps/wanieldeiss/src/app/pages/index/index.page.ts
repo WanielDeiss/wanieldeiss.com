@@ -12,5 +12,6 @@ export class IndexPage {
     'terminal lover',
     'maker',
     '3d printing enthusiast',
+    'dungeon master',
   ];
 }
