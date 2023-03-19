@@ -6,13 +6,14 @@ import { HeaderComponent } from './components';
 import { IndexPage, CvPage } from './pages';
 import { HttpClientModule } from '@angular/common/http';
 import { TypingDirective } from './directives/typing.directive';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 const COMPONENTS = [HeaderComponent];
 const PAGES = [IndexPage, CvPage];
 
 @NgModule({
   declarations: [AppComponent, ...COMPONENTS, ...PAGES, TypingDirective],
-  imports: [BrowserModule, HttpClientModule],
+  imports: [BrowserModule, HttpClientModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],
 })
