@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DarkModeService } from './services/dark-mode.service';
 
 @Component({
   selector: 'wd-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'wanieldeiss';
+  isDarkModeEnabled$ = this.darkModeService.isDarkModeEnabled$;
+  constructor(private readonly darkModeService: DarkModeService) {}
 }

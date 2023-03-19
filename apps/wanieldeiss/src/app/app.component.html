@@ -1,6 +1,9 @@
-<div class="bg-sky-900 min-h-screen">
-  <wd-header></wd-header>
-  <main>
-    <router-outlet></router-outlet>
-  </main>
-</div>
+<body [ngClass]="{ dark: isDarkModeEnabled$ | async }">
+  <div class="bg-sky-50 dark:bg-sky-900 min-h-screen">
+    <wd-header></wd-header>
+    <main>
+      <wd-index></wd-index>
+      <wd-cv></wd-cv>
+    </main>
+  </div>
+</body>
