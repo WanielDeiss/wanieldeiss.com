@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "serve": "nx run wanieldeiss:serve:development"
+    "serve": "nx run wanieldeiss:serve:development",
+    "build:production": "nx build wanieldeiss --configuration=production"
   },
   "private": true,
   "dependencies": {
