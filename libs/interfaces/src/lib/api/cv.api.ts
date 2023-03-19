@@ -6,7 +6,7 @@ export interface Cv {
   positions: CvPosition[];
 }
 
-interface CvPosition {
+export interface CvPosition {
   name: string;
   from: Date;
   to?: Date;

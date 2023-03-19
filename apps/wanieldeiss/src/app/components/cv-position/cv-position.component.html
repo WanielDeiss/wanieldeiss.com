@@ -1,0 +1,26 @@
+<ul class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+  <li
+    class="mb-2 relative"
+    [ngClass]="{ 'mb-0': !last }"
+    *ngFor="let position of positions; let last = last"
+  >
+    <fa-icon
+      [icon]="icons.faCircle"
+      class="absolute -left-9 top-2 text-[7px]"
+    ></fa-icon>
+    {{ position.name }}
+    <small>
+      (from
+      <time [attr.datetime]="position.from">
+        {{ position.from | date : 'MMM. y' }}
+      </time>
+      to <span *ngIf="position.isCurrent">today</span>
+      <span *ngIf="!position.isCurrent">
+        <time [attr.datetime]="position.to">
+          {{ position.to | date : 'MMM. y' }}
+        </time>
+      </span>
+      )
+    </small>
+  </li>
+</ul>
