@@ -8,15 +8,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-      - name: All things angular
-        uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.4.0
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          github_access_token: ${{ secrets.GITHUB_TOKEN }}
-          build_configuration: production
-          base_href: /
-          deploy_branch: gh-pages
-          angular_dist_build_folder: dist/apps/wanieldeiss
-
-permissions:
-  contents: write
+          node-version: '18'
+      - name: NPM Install
+        run: npm install
+      - name: NPM Build Production
+        run: npm run build:production
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: angular-build
+          path: dist/apps/wanieldeiss
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
