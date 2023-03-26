@@ -14,17 +14,12 @@
     >
       {{ cv.companyName }}
     </h3>
-    <span
-      class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
-    >
-      from
-      <time [attr.datetime]="cv.from">{{ cv.from | date : 'y' }}</time>
-      to
-      <span *ngIf="cv.isCurrent">today</span>
-      <span *ngIf="!cv.isCurrent">
-        <time [attr.datetime]="cv.to">{{ cv.to | date : 'y' }}</time>
-      </span>
-    </span>
+    <wd-cv-date
+      class="text-sm text-gray-400 dark:text-gray-500 block mb-2 font-normal leading-none"
+      [from]="cv.from"
+      [to]="cv.to"
+      [isCurrent]="!!cv.isCurrent"
+    />
     <wd-cv-position [positions]="cv.positions"></wd-cv-position>
   </li>
 </ol>

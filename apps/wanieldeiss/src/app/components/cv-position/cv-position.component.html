@@ -10,16 +10,12 @@
     ></fa-icon>
     {{ position.name }}
     <small>
-      (from
-      <time [attr.datetime]="position.from">
-        {{ position.from | date : 'MMM. y' }}
-      </time>
-      to <span *ngIf="position.isCurrent">today</span>
-      <span *ngIf="!position.isCurrent">
-        <time [attr.datetime]="position.to">
-          {{ position.to | date : 'MMM. y' }}
-        </time>
-      </span>
+      (
+      <wd-cv-date
+        [from]="position.from"
+        [to]="position.to"
+        [isCurrent]="!!position.isCurrent"
+      />
       )
     </small>
   </li>
