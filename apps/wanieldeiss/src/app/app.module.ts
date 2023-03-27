@@ -12,6 +12,7 @@ import { IndexPage, CvPage } from './pages';
 import { HttpClientModule } from '@angular/common/http';
 import { TypingDirective } from './directives/typing.directive';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SocialIconBarComponent } from './components/social-icon-bar/social-icon-bar.component';
 
 const COMPONENTS = [
   HeaderComponent,
@@ -28,6 +29,7 @@ const PAGES = [IndexPage, CvPage];
     ...PAGES,
     TypingDirective,
     CvDateComponent,
+    SocialIconBarComponent,
   ],
   imports: [BrowserModule, HttpClientModule, FontAwesomeModule],
   providers: [],
