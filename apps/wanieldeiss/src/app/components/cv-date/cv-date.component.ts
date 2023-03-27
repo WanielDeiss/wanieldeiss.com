@@ -9,4 +9,5 @@ export class CvDateComponent {
   @Input() from!: Date;
   @Input() to: Date | undefined = undefined;
   @Input() isCurrent = false;
+  @Input() dateFormat = 'y';
 }
