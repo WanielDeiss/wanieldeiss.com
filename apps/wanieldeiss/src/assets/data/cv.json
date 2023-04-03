@@ -5,9 +5,14 @@
     "isCurrent": true,
     "positions": [
       {
+        "name": "Team Lead",
+        "from": "2023-02-01",
+        "isCurrent": true
+      },
+      {
         "name": "Senior Developer - eLearning",
         "from": "2022-07-01",
-        "isCurrent": true
+        "to": "2023-01-31"
       },
       {
         "name": "Senior Developer - TIA Selection Tool",
