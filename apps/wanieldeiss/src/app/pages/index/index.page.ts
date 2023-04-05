@@ -7,11 +7,11 @@ import { Component } from '@angular/core';
 })
 export class IndexPage {
   thisIsMe: string[] = [
-    'software engineer',
-    'open source contributor',
-    'terminal lover',
-    'maker',
-    '3d printing enthusiast',
-    'dungeon master',
+    ' software engineer',
+    'n open source contributor',
+    ' terminal lover',
+    ' maker',
+    ' 3d printing enthusiast',
+    ' dungeon master',
   ];
 }
