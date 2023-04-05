@@ -1,10 +1,14 @@
 <body [ngClass]="{ dark: isDarkModeEnabled$ | async }">
-  <div class="bg-sky-50 dark:bg-sky-900 min-h-screen">
-    <wd-header />
-    <main>
-      <wd-index />
-      <wd-cv />
-    </main>
-  </div>
+  <wd-header />
+  <main
+    class="snap-y snap-mandatory h-screen overflow-scroll bg-sky-50 dark:bg-sky-900"
+  >
+    <wd-index
+      class="snap-start w-screen h-screen flex items-center justify-center"
+    />
+    <wd-cv
+      class="snap-start w-screen h-screen flex items-center justify-center"
+    />
+  </main>
   <wd-social-icon-bar class="fixed md:bottom-0 bottom-4 md:right-12 right-0" />
 </body>
