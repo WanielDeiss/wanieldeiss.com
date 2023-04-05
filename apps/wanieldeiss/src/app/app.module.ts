@@ -7,30 +7,26 @@ import {
   CvDateComponent,
   CvPositionComponent,
   HeaderComponent,
+  PageWrapperComponent,
+  SocialIconBarComponent,
 } from './components';
 import { IndexPage, CvPage } from './pages';
 import { HttpClientModule } from '@angular/common/http';
 import { TypingDirective } from './directives/typing.directive';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { SocialIconBarComponent } from './components/social-icon-bar/social-icon-bar.component';
 
 const COMPONENTS = [
   HeaderComponent,
   CvCompanyComponent,
   CvDateComponent,
   CvPositionComponent,
+  PageWrapperComponent,
+  SocialIconBarComponent,
 ];
 const PAGES = [IndexPage, CvPage];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ...COMPONENTS,
-    ...PAGES,
-    TypingDirective,
-    CvDateComponent,
-    SocialIconBarComponent,
-  ],
+  declarations: [AppComponent, ...COMPONENTS, ...PAGES, TypingDirective],
   imports: [BrowserModule, HttpClientModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],
