@@ -10,7 +10,7 @@ import {
   PageWrapperComponent,
   SocialIconBarComponent,
 } from './components';
-import { IndexPage, CvPage } from './pages';
+import { IndexPage } from './pages';
 import { HttpClientModule } from '@angular/common/http';
 import { TypingDirective } from './directives/typing.directive';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -23,7 +23,7 @@ const COMPONENTS = [
   PageWrapperComponent,
   SocialIconBarComponent,
 ];
-const PAGES = [IndexPage, CvPage];
+const PAGES = [IndexPage];
 
 @NgModule({
   declarations: [AppComponent, ...COMPONENTS, ...PAGES, TypingDirective],
