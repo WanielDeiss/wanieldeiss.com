@@ -34,7 +34,7 @@ jobs:
       id-token: write
     needs: build
     steps:
-      - uses: actions/download-artifact@master
+      - uses: actions/download-artifact@main
         with:
           name: build
           path: .
