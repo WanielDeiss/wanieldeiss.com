@@ -12,26 +12,32 @@
     "@angular/router": "17.3.9",
     "@fortawesome/angular-fontawesome": "^0.12.1",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
+    "@nx/angular": "18.3.5",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "0.14.8",
-    "@nx/angular": "18.3.5",
     "@angular-devkit/build-angular": "17.3.9",
     "@angular-devkit/core": "17.3.9",
     "@angular-devkit/schematics": "17.3.9",
     "@angular-eslint/eslint-plugin": "17.3.0",
     "@angular-eslint/eslint-plugin-template": "17.3.0",
     "@angular-eslint/template-parser": "17.3.0",
-    "@angular/cli": "~17.1.0",
+    "@angular/cli": "~17.3.0",
     "@angular/compiler-cli": "17.3.9",
     "@angular/language-service": "17.3.9",
+    "@nx/cypress": "18.3.5",
+    "@nx/eslint": "18.3.5",
+    "@nx/eslint-plugin": "18.3.5",
+    "@nx/jest": "18.3.5",
+    "@nx/js": "18.3.5",
+    "@nx/workspace": "18.3.5",
     "@schematics/angular": "17.3.9",
     "@types/jest": "^29.4.0",
     "@types/node": "^18.16.9",
     "@typescript-eslint/eslint-plugin": "7.9.0",
     "@typescript-eslint/parser": "7.9.0",
     "autoprefixer": "^10.4.14",
-    "cypress": "^13.0.0",
+    "cypress": "^13.6.6",
     "eslint": "8.57.1",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-cypress": "2.15.2",
@@ -44,13 +50,7 @@
     "tailwindcss": "^3.2.7",
     "ts-jest": "29.1.5",
     "ts-node": "10.9.1",
-    "typescript": "5.4.5",
-    "@nx/workspace": "18.3.5",
-    "@nx/js": "18.3.5",
-    "@nx/eslint-plugin": "18.3.5",
-    "@nx/jest": "18.3.5",
-    "@nx/cypress": "18.3.5",
-    "@nx/eslint": "18.3.5"
+    "typescript": "5.4.5"
   },
   "pathMappings": {
     "@dan/interfaces": [
@@ -60,6 +60,56 @@
   "nxJsonPlugins": [],
   "fileMap": {
     "projectFileMap": {
+      "interfaces": [
+        {
+          "file": "libs/interfaces/.babelrc",
+          "hash": "12976955572016683368"
+        },
+        {
+          "file": "libs/interfaces/.eslintrc.json",
+          "hash": "13800677001662881425"
+        },
+        {
+          "file": "libs/interfaces/README.md",
+          "hash": "210769515211758371"
+        },
+        {
+          "file": "libs/interfaces/jest.config.ts",
+          "hash": "18118454956290528385"
+        },
+        {
+          "file": "libs/interfaces/project.json",
+          "hash": "14050923017226648875"
+        },
+        {
+          "file": "libs/interfaces/src/index.ts",
+          "hash": "14428353282588746736"
+        },
+        {
+          "file": "libs/interfaces/src/lib/api/cv.api.ts",
+          "hash": "14668978267457047488"
+        },
+        {
+          "file": "libs/interfaces/src/lib/api/index.ts",
+          "hash": "12543805190313674637"
+        },
+        {
+          "file": "libs/interfaces/src/lib/index.ts",
+          "hash": "13443657969788988525"
+        },
+        {
+          "file": "libs/interfaces/tsconfig.json",
+          "hash": "17079550796797979564"
+        },
+        {
+          "file": "libs/interfaces/tsconfig.lib.json",
+          "hash": "1398023143379268451"
+        },
+        {
+          "file": "libs/interfaces/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
       "wanieldeiss-e2e": [
         {
           "file": "apps/wanieldeiss-e2e/.eslintrc.json",
@@ -415,56 +465,6 @@
           "file": "apps/wanieldeiss/tsconfig.spec.json",
           "hash": "7670846817526018622"
         }
-      ],
-      "interfaces": [
-        {
-          "file": "libs/interfaces/.babelrc",
-          "hash": "12976955572016683368"
-        },
-        {
-          "file": "libs/interfaces/.eslintrc.json",
-          "hash": "13800677001662881425"
-        },
-        {
-          "file": "libs/interfaces/README.md",
-          "hash": "210769515211758371"
-        },
-        {
-          "file": "libs/interfaces/jest.config.ts",
-          "hash": "18118454956290528385"
-        },
-        {
-          "file": "libs/interfaces/project.json",
-          "hash": "14050923017226648875"
-        },
-        {
-          "file": "libs/interfaces/src/index.ts",
-          "hash": "14428353282588746736"
-        },
-        {
-          "file": "libs/interfaces/src/lib/api/cv.api.ts",
-          "hash": "14668978267457047488"
-        },
-        {
-          "file": "libs/interfaces/src/lib/api/index.ts",
-          "hash": "12543805190313674637"
-        },
-        {
-          "file": "libs/interfaces/src/lib/index.ts",
-          "hash": "13443657969788988525"
-        },
-        {
-          "file": "libs/interfaces/tsconfig.json",
-          "hash": "17079550796797979564"
-        },
-        {
-          "file": "libs/interfaces/tsconfig.lib.json",
-          "hash": "1398023143379268451"
-        },
-        {
-          "file": "libs/interfaces/tsconfig.spec.json",
-          "hash": "6514620907549802163"
-        }
       ]
     },
     "nonProjectFiles": [
@@ -529,20 +529,16 @@
         "hash": "3244421341483603138"
       },
       {
-        "file": "migrations.json",
-        "hash": "16185593582691999487"
-      },
-      {
         "file": "nx.json",
-        "hash": "1265772520711214820"
+        "hash": "12294182394600320207"
       },
       {
         "file": "package-lock.json",
-        "hash": "8459588647329387596"
+        "hash": "5999452405088177833"
       },
       {
         "file": "package.json",
-        "hash": "12026157699261377410"
+        "hash": "7549733348643874332"
       },
       {
         "file": "tools/tsconfig.tools.json",

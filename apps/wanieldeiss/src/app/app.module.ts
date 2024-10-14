@@ -11,7 +11,7 @@ import {
   SocialIconBarComponent,
 } from './components';
 import { IndexPage } from './pages';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { TypingDirective } from './directives/typing.directive';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -25,10 +25,6 @@ const COMPONENTS = [
 ];
 const PAGES = [IndexPage];
 
-@NgModule({
-  declarations: [AppComponent, ...COMPONENTS, ...PAGES, TypingDirective],
-  imports: [BrowserModule, HttpClientModule, FontAwesomeModule],
-  providers: [],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [AppComponent, ...COMPONENTS, ...PAGES, TypingDirective],
+    bootstrap: [AppComponent], imports: [BrowserModule, FontAwesomeModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}

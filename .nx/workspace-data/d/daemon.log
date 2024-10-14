@@ -66,3 +66,47 @@
 [NX Daemon Server] - 2024-10-14T19:26:26.486Z - Closed a connection. Number of open connections: 0
 [NX Daemon Server] - 2024-10-14T19:26:26.486Z - [WATCHER]: Stopping the watcher for /Users/Dan/Projects/private/wanieldeiss.com (sources)
 [NX Daemon Server] - 2024-10-14T19:26:26.486Z - [WATCHER]: Stopping the watcher for /Users/Dan/Projects/private/wanieldeiss.com (outputs)
+[NX Daemon Server] - 2024-10-14T19:30:54.741Z - Started listening on: /var/folders/gp/nhkqq10933b8fv2syclmlsfr0000gp/T/27a69d55a4df5923518e/d.sock
+[NX Daemon Server] - 2024-10-14T19:30:54.744Z - [WATCHER]: Subscribed to changes within: /Users/Dan/Projects/private/wanieldeiss.com (native)
+[NX Daemon Server] - 2024-10-14T19:30:54.749Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-10-14T19:30:54.749Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-10-14T19:30:54.751Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-10-14T19:30:54.751Z - [REQUEST]: Responding to the client. Shutdown initiated
+[NX Daemon Server] - 2024-10-14T19:30:54.752Z - Done responding to the client Shutdown initiated
+[NX Daemon Server] - 2024-10-14T19:30:54.752Z - Handled FORCE_SHUTDOWN. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-10-14T19:30:54.753Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-10-14T19:30:54.754Z - [WATCHER]: Stopping the watcher for /Users/Dan/Projects/private/wanieldeiss.com (sources)
+[NX Daemon Server] - 2024-10-14T19:30:54.754Z - [WATCHER]: Stopping the watcher for /Users/Dan/Projects/private/wanieldeiss.com (outputs)
+[NX Daemon Server] - 2024-10-14T19:31:56.088Z - Started listening on: /var/folders/gp/nhkqq10933b8fv2syclmlsfr0000gp/T/27a69d55a4df5923518e/d.sock
+[NX Daemon Server] - 2024-10-14T19:31:56.091Z - [WATCHER]: Subscribed to changes within: /Users/Dan/Projects/private/wanieldeiss.com (native)
+[NX Daemon Server] - 2024-10-14T19:31:56.095Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-10-14T19:31:56.096Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-10-14T19:31:56.097Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-10-14T19:31:56.098Z - [REQUEST]: Responding to the client. Shutdown initiated
+[NX Daemon Server] - 2024-10-14T19:31:56.098Z - Done responding to the client Shutdown initiated
+[NX Daemon Server] - 2024-10-14T19:31:56.098Z - Handled FORCE_SHUTDOWN. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-10-14T19:31:56.100Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-10-14T19:31:56.100Z - [WATCHER]: Stopping the watcher for /Users/Dan/Projects/private/wanieldeiss.com (sources)
+[NX Daemon Server] - 2024-10-14T19:31:56.100Z - [WATCHER]: Stopping the watcher for /Users/Dan/Projects/private/wanieldeiss.com (outputs)
+[NX Daemon Server] - 2024-10-14T19:32:20.626Z - Started listening on: /var/folders/gp/nhkqq10933b8fv2syclmlsfr0000gp/T/27a69d55a4df5923518e/d.sock
+[NX Daemon Server] - 2024-10-14T19:32:20.628Z - [WATCHER]: Subscribed to changes within: /Users/Dan/Projects/private/wanieldeiss.com (native)
+[NX Daemon Server] - 2024-10-14T19:32:20.634Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-10-14T19:32:20.634Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-10-14T19:32:20.636Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-10-14T19:32:20.636Z - [REQUEST]: Responding to the client. Shutdown initiated
+[NX Daemon Server] - 2024-10-14T19:32:20.637Z - Done responding to the client Shutdown initiated
+[NX Daemon Server] - 2024-10-14T19:32:20.637Z - Handled FORCE_SHUTDOWN. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-10-14T19:32:20.639Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-10-14T19:32:20.639Z - [WATCHER]: Stopping the watcher for /Users/Dan/Projects/private/wanieldeiss.com (sources)
+[NX Daemon Server] - 2024-10-14T19:32:20.639Z - [WATCHER]: Stopping the watcher for /Users/Dan/Projects/private/wanieldeiss.com (outputs)
+[NX Daemon Server] - 2024-10-14T19:32:23.085Z - Started listening on: /var/folders/gp/nhkqq10933b8fv2syclmlsfr0000gp/T/27a69d55a4df5923518e/d.sock
+[NX Daemon Server] - 2024-10-14T19:32:23.087Z - [WATCHER]: Subscribed to changes within: /Users/Dan/Projects/private/wanieldeiss.com (native)
+[NX Daemon Server] - 2024-10-14T19:32:23.089Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-10-14T19:32:23.090Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-10-14T19:32:23.091Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-10-14T19:32:23.092Z - [REQUEST]: Responding to the client. Shutdown initiated
+[NX Daemon Server] - 2024-10-14T19:32:23.092Z - Done responding to the client Shutdown initiated
+[NX Daemon Server] - 2024-10-14T19:32:23.092Z - Handled FORCE_SHUTDOWN. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-10-14T19:32:23.094Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-10-14T19:32:23.094Z - [WATCHER]: Stopping the watcher for /Users/Dan/Projects/private/wanieldeiss.com (sources)
+[NX Daemon Server] - 2024-10-14T19:32:23.094Z - [WATCHER]: Stopping the watcher for /Users/Dan/Projects/private/wanieldeiss.com (outputs)
