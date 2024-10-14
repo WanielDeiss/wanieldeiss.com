@@ -1,0 +1,578 @@
+{
+  "version": "6.0",
+  "nxVersion": "16.9.1",
+  "deps": {
+    "@angular/animations": "16.2.9",
+    "@angular/common": "16.2.9",
+    "@angular/compiler": "16.2.9",
+    "@angular/core": "16.2.9",
+    "@angular/forms": "16.2.9",
+    "@angular/platform-browser": "16.2.9",
+    "@angular/platform-browser-dynamic": "16.2.9",
+    "@angular/router": "16.2.9",
+    "@fortawesome/angular-fontawesome": "^0.12.1",
+    "@fortawesome/free-solid-svg-icons": "^6.3.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "0.13.3",
+    "@nx/angular": "16.9.1",
+    "@angular-devkit/build-angular": "16.2.9",
+    "@angular-devkit/core": "16.2.9",
+    "@angular-devkit/schematics": "16.2.9",
+    "@angular-eslint/eslint-plugin": "16.0.3",
+    "@angular-eslint/eslint-plugin-template": "16.0.3",
+    "@angular-eslint/template-parser": "16.0.3",
+    "@angular/cli": "~16.1.0",
+    "@angular/compiler-cli": "16.2.9",
+    "@angular/language-service": "16.2.9",
+    "@schematics/angular": "16.2.9",
+    "@types/jest": "^29.4.0",
+    "@types/node": "16.11.7",
+    "@typescript-eslint/eslint-plugin": "5.62.0",
+    "@typescript-eslint/parser": "5.62.0",
+    "autoprefixer": "^10.4.14",
+    "cypress": "^13.0.0",
+    "eslint": "8.46.0",
+    "eslint-config-prettier": "8.1.0",
+    "eslint-plugin-cypress": "2.15.2",
+    "jest": "^29.4.1",
+    "jest-environment-jsdom": "^29.4.1",
+    "jest-preset-angular": "13.1.6",
+    "nx": "16.9.1",
+    "postcss": "^8.4.21",
+    "prettier": "^2.6.2",
+    "tailwindcss": "^3.2.7",
+    "ts-jest": "29.1.5",
+    "ts-node": "10.9.1",
+    "typescript": "5.1.6",
+    "nx-cloud": "19.1.0",
+    "@nx/workspace": "16.9.1",
+    "@nx/js": "16.9.1",
+    "@nx/linter": "16.9.1",
+    "@nx/eslint-plugin": "16.9.1",
+    "@nx/jest": "16.9.1",
+    "@nx/cypress": "16.9.1"
+  },
+  "pathMappings": {
+    "@dan/interfaces": [
+      "libs/interfaces/src/index.ts"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {
+      "wanieldeiss": [
+        {
+          "file": "apps/wanieldeiss/.eslintrc.json",
+          "hash": "9462734948755856400"
+        },
+        {
+          "file": "apps/wanieldeiss/jest.config.ts",
+          "hash": "17768827582927350937"
+        },
+        {
+          "file": "apps/wanieldeiss/project.json",
+          "hash": "3007125732640476266"
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/app.component.html",
+          "hash": "7118894773196406914"
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/app.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/app.component.spec.ts",
+          "hash": "9683462336983390833",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/app.component.ts",
+          "hash": "14398356814040416126",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/app.module.ts",
+          "hash": "5273792060087546563",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@angular/common",
+            "npm:@fortawesome/angular-fontawesome"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/components/cv-company/cv-company.component.html",
+          "hash": "6694019869840988884"
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/components/cv-company/cv-company.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/components/cv-company/cv-company.component.spec.ts",
+          "hash": "10082372595770066987",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/components/cv-company/cv-company.component.ts",
+          "hash": "17493293562164394731",
+          "deps": [
+            "npm:@angular/core",
+            "interfaces",
+            "npm:@fortawesome/free-solid-svg-icons"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/components/cv-date/cv-date.component.html",
+          "hash": "5578624227928328804"
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/components/cv-date/cv-date.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/components/cv-date/cv-date.component.spec.ts",
+          "hash": "11361178693446805553",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/components/cv-date/cv-date.component.ts",
+          "hash": "2135279633498528885",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/components/cv-position/cv-position.component.html",
+          "hash": "12496584037569377143"
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/components/cv-position/cv-position.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/components/cv-position/cv-position.component.spec.ts",
+          "hash": "979632731035182194",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/components/cv-position/cv-position.component.ts",
+          "hash": "13134522598337735971",
+          "deps": [
+            "npm:@angular/core",
+            "interfaces",
+            "npm:@fortawesome/free-solid-svg-icons"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/components/header/header.component.html",
+          "hash": "1878350818706339761"
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/components/header/header.component.spec.ts",
+          "hash": "6153927307393670060",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/components/header/header.component.ts",
+          "hash": "6386400869587054437",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/components/index.ts",
+          "hash": "2021409730002807289"
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/components/page-wrapper/page-wrapper.component.html",
+          "hash": "5594043572691986285"
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/components/page-wrapper/page-wrapper.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/components/page-wrapper/page-wrapper.component.spec.ts",
+          "hash": "14664568691138301380",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/components/page-wrapper/page-wrapper.component.ts",
+          "hash": "15939525425536386725",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/components/social-icon-bar/social-icon-bar.component.html",
+          "hash": "3289062490658426798"
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/components/social-icon-bar/social-icon-bar.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/components/social-icon-bar/social-icon-bar.component.spec.ts",
+          "hash": "2590159069046755450",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/components/social-icon-bar/social-icon-bar.component.ts",
+          "hash": "3151601028219116245",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/directives/typing.directive.spec.ts",
+          "hash": "4028027662759434146"
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/directives/typing.directive.ts",
+          "hash": "329735903430967962",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/pages/index/index.page.html",
+          "hash": "15037317709060190188"
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/pages/index/index.page.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/pages/index/index.page.spec.ts",
+          "hash": "9392189487420689047",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/pages/index/index.page.ts",
+          "hash": "6720891005836838030",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/pages/index.ts",
+          "hash": "7122598903206026490"
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/services/cv.service.spec.ts",
+          "hash": "5426968918579717075",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/services/cv.service.ts",
+          "hash": "15464817264576617366",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "interfaces"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/services/dark-mode.service.spec.ts",
+          "hash": "16870313463719489438",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss/src/app/services/dark-mode.service.ts",
+          "hash": "1094641961312508780",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/wanieldeiss/src/assets/data/cv.json",
+          "hash": "2027137493160720770"
+        },
+        {
+          "file": "apps/wanieldeiss/src/assets/wanieldeiss-logo.svg",
+          "hash": "4701445835477161116"
+        },
+        {
+          "file": "apps/wanieldeiss/src/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/wanieldeiss/src/index.html",
+          "hash": "14522482378320591096"
+        },
+        {
+          "file": "apps/wanieldeiss/src/main.ts",
+          "hash": "3259059517603285449",
+          "deps": [
+            "npm:@angular/platform-browser-dynamic"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss/src/styles.scss",
+          "hash": "5800957942693726969"
+        },
+        {
+          "file": "apps/wanieldeiss/src/test-setup.ts",
+          "hash": "17711435995618823417",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss/tailwind.config.js",
+          "hash": "2876401245527258731",
+          "deps": [
+            "npm:@nx/angular",
+            "npm:path"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss/tsconfig.app.json",
+          "hash": "8365644956319658761"
+        },
+        {
+          "file": "apps/wanieldeiss/tsconfig.editor.json",
+          "hash": "17511610827034788226"
+        },
+        {
+          "file": "apps/wanieldeiss/tsconfig.json",
+          "hash": "12094030803572703611"
+        },
+        {
+          "file": "apps/wanieldeiss/tsconfig.spec.json",
+          "hash": "7670846817526018622"
+        }
+      ],
+      "interfaces": [
+        {
+          "file": "libs/interfaces/.babelrc",
+          "hash": "14637968239574891430"
+        },
+        {
+          "file": "libs/interfaces/.eslintrc.json",
+          "hash": "13800677001662881425"
+        },
+        {
+          "file": "libs/interfaces/README.md",
+          "hash": "210769515211758371"
+        },
+        {
+          "file": "libs/interfaces/jest.config.ts",
+          "hash": "18118454956290528385"
+        },
+        {
+          "file": "libs/interfaces/project.json",
+          "hash": "15830917877256235757"
+        },
+        {
+          "file": "libs/interfaces/src/index.ts",
+          "hash": "14428353282588746736"
+        },
+        {
+          "file": "libs/interfaces/src/lib/api/cv.api.ts",
+          "hash": "14668978267457047488"
+        },
+        {
+          "file": "libs/interfaces/src/lib/api/index.ts",
+          "hash": "12543805190313674637"
+        },
+        {
+          "file": "libs/interfaces/src/lib/index.ts",
+          "hash": "13443657969788988525"
+        },
+        {
+          "file": "libs/interfaces/tsconfig.json",
+          "hash": "17079550796797979564"
+        },
+        {
+          "file": "libs/interfaces/tsconfig.lib.json",
+          "hash": "1398023143379268451"
+        },
+        {
+          "file": "libs/interfaces/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        }
+      ],
+      "wanieldeiss-e2e": [
+        {
+          "file": "apps/wanieldeiss-e2e/.eslintrc.json",
+          "hash": "15523834149352881398"
+        },
+        {
+          "file": "apps/wanieldeiss-e2e/cypress.config.ts",
+          "hash": "212614215478757206",
+          "deps": [
+            "npm:cypress",
+            "npm:@nx/cypress"
+          ]
+        },
+        {
+          "file": "apps/wanieldeiss-e2e/project.json",
+          "hash": "17512726579623448777"
+        },
+        {
+          "file": "apps/wanieldeiss-e2e/src/e2e/app.cy.ts",
+          "hash": "1127072003710567247"
+        },
+        {
+          "file": "apps/wanieldeiss-e2e/src/fixtures/example.json",
+          "hash": "11614668686582597233"
+        },
+        {
+          "file": "apps/wanieldeiss-e2e/src/support/app.po.ts",
+          "hash": "11157016311132186162"
+        },
+        {
+          "file": "apps/wanieldeiss-e2e/src/support/commands.ts",
+          "hash": "7314691991044890572"
+        },
+        {
+          "file": "apps/wanieldeiss-e2e/src/support/e2e.ts",
+          "hash": "3666078656922506009"
+        },
+        {
+          "file": "apps/wanieldeiss-e2e/tsconfig.json",
+          "hash": "3839629211904585536"
+        }
+      ]
+    },
+    "nonProjectFiles": [
+      {
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "7663861978715868291"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "1659929058009100827"
+      },
+      {
+        "file": ".github/workflows/gh-page.yml",
+        "hash": "12862437558711419370"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "2178144051909739023"
+      },
+      {
+        "file": ".nx/cache/file-map.json",
+        "hash": "10962620210864920349"
+      },
+      {
+        "file": ".nx/cache/lockfile.hash",
+        "hash": "10968374388567816463"
+      },
+      {
+        "file": ".nx/cache/parsed-lock-file.json",
+        "hash": "2513452186304414011"
+      },
+      {
+        "file": ".nx/cache/project-graph.json",
+        "hash": "219637490719927328"
+      },
+      {
+        "file": ".nx/workspace-data/d/daemon.log",
+        "hash": "11681668877934795930"
+      },
+      {
+        "file": ".nx/workspace-data/nx_files.nxt",
+        "hash": "16775390571841226379"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "17733650430415207254"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "235626400633494639"
+      },
+      {
+        "file": "README.md",
+        "hash": "3380542918383506176"
+      },
+      {
+        "file": "apps/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "2950215254536237782"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "2772139696069860212"
+      },
+      {
+        "file": "libs/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "migrations.json",
+        "hash": "15333246360770759200"
+      },
+      {
+        "file": "nx.json",
+        "hash": "11749062030881730762"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "9458134721825578506"
+      },
+      {
+        "file": "package.json",
+        "hash": "5774115101950425055"
+      },
+      {
+        "file": "tools/generators/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "tools/tsconfig.tools.json",
+        "hash": "16088922570277978783"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "3661194690948227983"
+      }
+    ]
+  }
+}
