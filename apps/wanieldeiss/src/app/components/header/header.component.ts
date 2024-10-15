@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { DarkModeService } from '../../services/dark-mode.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
+  standalone: true,
+  imports: [CommonModule],
   selector: 'wd-header',
   templateUrl: './header.component.html',
 })

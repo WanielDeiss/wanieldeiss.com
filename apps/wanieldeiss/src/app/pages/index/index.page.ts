@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
+import { PageWrapperComponent } from '../../components';
+import { TypingDirective } from '../../directives/typing.directive';
 
 @Component({
+  standalone: true,
+  imports: [PageWrapperComponent, TypingDirective],
   selector: 'wd-index',
   templateUrl: './index.page.html',
   styleUrls: ['./index.page.scss'],

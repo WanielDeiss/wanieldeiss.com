@@ -1,6 +1,9 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
+  standalone: true,
+  imports: [CommonModule],
   selector: 'wd-social-icon-bar',
   templateUrl: './social-icon-bar.component.html',
   styleUrls: ['./social-icon-bar.component.scss'],

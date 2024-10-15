@@ -2,6 +2,7 @@ import { Directive, ElementRef, Input, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Directive({
+  standalone: true,
   selector: '[wdTyping]',
 })
 export class TypingDirective implements OnInit {
