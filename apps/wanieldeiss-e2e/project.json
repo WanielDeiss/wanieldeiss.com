@@ -5,9 +5,9 @@
   "projectType": "application",
   "targets": {
     "e2e": {
-      "executor": "@nx/cypress:cypress",
+      "executor": "@nx/playwright:playwright",
       "options": {
-        "cypressConfig": "apps/wanieldeiss-e2e/cypress.config.ts",
+        "playwrightConfig": "apps/wanieldeiss-e2e/playwright.config.ts",
         "devServerTarget": "wanieldeiss:serve:development",
         "testingType": "e2e"
       },
@@ -19,9 +19,13 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     }
   },
   "tags": [],
-  "implicitDependencies": ["wanieldeiss"]
+  "implicitDependencies": [
+    "wanieldeiss"
+  ]
 }
