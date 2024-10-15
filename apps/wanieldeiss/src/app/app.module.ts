@@ -3,9 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import {
-  CvCompanyComponent,
-  CvDateComponent,
-  CvPositionComponent,
   HeaderComponent,
   PageWrapperComponent,
   SocialIconBarComponent,
@@ -17,9 +14,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 const COMPONENTS = [
   HeaderComponent,
-  CvCompanyComponent,
-  CvDateComponent,
-  CvPositionComponent,
   PageWrapperComponent,
   SocialIconBarComponent,
 ];

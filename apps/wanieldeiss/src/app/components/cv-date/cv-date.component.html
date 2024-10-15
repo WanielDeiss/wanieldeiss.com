@@ -1,9 +1,0 @@
-<span>
-  from
-  <time [attr.datetime]="from">{{ from | date : dateFormat }}</time>
-  to
-  <span *ngIf="isCurrent">today</span>
-  <span *ngIf="!isCurrent">
-    <time [attr.datetime]="to">{{ to | date : dateFormat }}</time>
-  </span>
-</span>
