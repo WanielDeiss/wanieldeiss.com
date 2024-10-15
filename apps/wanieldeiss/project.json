@@ -6,20 +6,28 @@
   "prefix": "wd",
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "executor": "@angular-devkit/build-angular:browser-esbuild",
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/wanieldeiss",
         "index": "apps/wanieldeiss/src/index.html",
         "main": "apps/wanieldeiss/src/main.ts",
-        "polyfills": ["zone.js"],
-        "tsConfig": "apps/wanieldeiss/tsconfig.app.json",
-        "inlineStyleLanguage": "scss",
-        "assets": [
-          "apps/wanieldeiss/src/favicon.ico",
-          "apps/wanieldeiss/src/assets"
+        "polyfills": [
+          "zone.js"
         ],
-        "styles": ["apps/wanieldeiss/src/styles.scss"],
+        "tsConfig": "apps/wanieldeiss/tsconfig.app.json",
+        "inlineStyleLanguage": "css",
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "apps/org/public"
+          }
+        ],
+        "styles": [
+          "apps/wanieldeiss/src/styles.css"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -69,11 +77,15 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/wanieldeiss/jest.config.ts"
       }
