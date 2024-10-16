@@ -6,14 +6,14 @@
   "prefix": "wd",
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:browser-esbuild",
+      "executor": "@angular-devkit/build-angular:application",
       "outputs": [
         "{options.outputPath}"
       ],
       "options": {
         "outputPath": "dist/apps/wanieldeiss",
         "index": "apps/wanieldeiss/src/index.html",
-        "main": "apps/wanieldeiss/src/main.ts",
+        "browser": "apps/wanieldeiss/src/main.ts",
         "polyfills": [
           "zone.js"
         ],
@@ -47,12 +47,9 @@
           "outputHashing": "all"
         },
         "development": {
-          "buildOptimizer": false,
           "optimization": false,
-          "vendorChunk": true,
           "extractLicenses": false,
           "sourceMap": true,
-          "namedChunks": true
         }
       },
       "defaultConfiguration": "production"
