@@ -5,6 +5,10 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   selector: 'wd-page-wrapper',
-  templateUrl: './page-wrapper.component.html',
+  template: `
+    <section class="h-full pt-20 pb-12 px-8 flex justify-center items-center">
+      <ng-content></ng-content>
+    </section>
+  `,
 })
 export class PageWrapperComponent {}

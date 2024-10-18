@@ -5,7 +5,23 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   selector: 'wd-social-icon-bar',
-  templateUrl: './social-icon-bar.component.html',
+  template: `
+    <div
+      class="flex md:flex-col md:space-y-4 md:space-x-0 space-x-4 flex-row text-sky-800 dark:text-sky-50 items-center"
+    >
+      <a [href]="link.link" target="_blank" *ngFor="let link of socialLinks">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path [attr.d]="link.svgPath" />
+        </svg>
+      </a>
+      <div class="bg-sky-800 dark:bg-sky-50 md:h-32 md:w-0.5 h-0.5 w-32"></div>
+    </div>
+  `,
 })
 export class SocialIconBarComponent {
   socialLinks = [
