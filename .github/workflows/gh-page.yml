@@ -22,7 +22,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: build
-          path: dist/apps/wanieldeiss
+          path: dist/apps/wanieldeiss/browser
           if-no-files-found: error
   deploy:
     environment:
