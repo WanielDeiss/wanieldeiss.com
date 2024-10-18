@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   imports: [CommonModule],
   selector: 'wd-social-icon-bar',
   templateUrl: './social-icon-bar.component.html',
-  styleUrls: ['./social-icon-bar.component.scss'],
 })
 export class SocialIconBarComponent {
   socialLinks = [

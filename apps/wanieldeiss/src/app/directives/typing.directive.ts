@@ -17,7 +17,7 @@ export class TypingDirective implements OnInit {
 
   currentWord$ = new BehaviorSubject<[string, number]>(['', 0]);
 
-  constructor(private elRef: ElementRef) {}
+  constructor(private readonly elRef: ElementRef) {}
 
   ngOnInit(): void {
     this.currentWord$.subscribe(([word, index]) => {

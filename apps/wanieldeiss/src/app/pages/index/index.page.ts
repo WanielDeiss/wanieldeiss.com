@@ -7,7 +7,6 @@ import { TypingDirective } from '../../directives/typing.directive';
   imports: [PageWrapperComponent, TypingDirective],
   selector: 'wd-index',
   templateUrl: './index.page.html',
-  styleUrls: ['./index.page.scss'],
 })
 export class IndexPage {
   thisIsMe: string[] = [

@@ -21,7 +21,11 @@
   <nav>
     <ul class="flex">
       <li class="w-6 h-6">
-        <span (click)="clickToggleDarkMode()" class="hover:cursor-pointer">
+        <span
+          (click)="clickToggleDarkMode()"
+          (keypress)="clickToggleDarkMode()"
+          class="hover:cursor-pointer"
+        >
           <svg
             fill="none"
             stroke="currentColor"
