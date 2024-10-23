@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   selector: 'wd-social-icon-bar',
   template: `
     <div
-      class="flex md:flex-col md:space-y-4 md:space-x-0 space-x-4 flex-row text-sky-800 dark:text-sky-50 items-center"
+      class="fixed bottom-0 right-12 flex md:flex-col md:space-y-4 md:space-x-0 space-x-4 flex-row text-sky-800 dark:text-sky-50 items-center"
     >
       <a [href]="link.link" target="_blank" *ngFor="let link of socialLinks">
         <svg

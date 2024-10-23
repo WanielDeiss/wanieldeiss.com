@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
 import { DarkModeService } from './services/dark-mode.service';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { HeaderComponent, SocialIconBarComponent } from './components';
-import { IndexPage } from './pages';
 
 @Component({
   standalone: true,
-  imports: [CommonModule, HeaderComponent, IndexPage, SocialIconBarComponent],
+  imports: [
+    CommonModule,
+    RouterModule,
+    HeaderComponent,
+    SocialIconBarComponent,
+  ],
   selector: 'wd-root',
   templateUrl: './app.component.html',
 })

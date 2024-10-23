@@ -1,12 +1,5 @@
 <div [ngClass]="{ dark: isDarkModeEnabled$ | async }">
   <wd-header />
-  <main
-    class="snap-y snap-mandatory h-screen overflow-scroll bg-sky-50 dark:bg-sky-900"
-  >
-    <wd-index
-      id="index-section"
-      class="snap-start w-screen h-screen flex items-center justify-center"
-    />
-  </main>
-  <wd-social-icon-bar class="fixed md:bottom-0 bottom-4 md:right-12 right-0" />
+  <router-outlet></router-outlet>
+  <wd-social-icon-bar />
 </div>

@@ -1,17 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PageWrapperComponent } from './page-wrapper.component';
+import { NotFoundPage } from './not-found.page';
+import { CommonModule } from '@angular/common';
 
-describe('PageWrapperComponent', () => {
-  let component: PageWrapperComponent;
-  let fixture: ComponentFixture<PageWrapperComponent>;
+describe('NotFoundPage', () => {
+  let component: NotFoundPage;
+  let fixture: ComponentFixture<NotFoundPage>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PageWrapperComponent],
+      imports: [NotFoundPage, CommonModule],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(PageWrapperComponent);
+    fixture = TestBed.createComponent(NotFoundPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

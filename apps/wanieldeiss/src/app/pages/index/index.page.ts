@@ -1,40 +1,22 @@
 import { Component } from '@angular/core';
-import { PageWrapperComponent } from '../../components';
-import { TypingDirective } from '../../directives/typing.directive';
+import { CommonModule } from '@angular/common';
+import { FullSizeDirective } from '../../directives/full-size.directive';
+import { FrameCoverComponent } from '../../components/frame-cover/frame-cover.component';
 
 @Component({
   standalone: true,
-  imports: [PageWrapperComponent, TypingDirective],
+  imports: [CommonModule, FullSizeDirective, FrameCoverComponent],
   selector: 'wd-index',
   template: `
-    <wd-page-wrapper>
-      <div>
-        <span
-          class="font-mono text-sky-600 dark:text-sky-400 md:text-base text-sm"
-        >
-          Hi, my name is
-        </span>
-        <h1
-          class="font-extrabold text-sky-800 dark:text-sky-50 md:text-7xl text-4xl"
-        >
-          Daniel Weiß
-        </h1>
-        <p class="text-sky-400 dark:text-sky-200 md:text-5xl text-2xl">
-          I'm a<span [wdTyping]="thisIsMe"></span>
-          <span class="animate-ping">_</span>
-          from Germany.
-        </p>
+    <main>
+      <div
+        class="flex justify-center items-center"
+        wdFullSize="even"
+        [isFullScreen]="true"
+      >
+        <wd-frame-cover />
       </div>
-    </wd-page-wrapper>
+    </main>
   `,
 })
-export class IndexPage {
-  thisIsMe: string[] = [
-    ' software engineer',
-    'n open source contributor',
-    ' terminal lover',
-    ' maker',
-    ' 3d printing enthusiast',
-    ' dungeon master',
-  ];
-}
+export class IndexPage {}
