@@ -15,7 +15,7 @@ export class FullSizeDirective {
   wdFullSize = input<FullSizeBgType>('even');
   isFullScreen = input<boolean>(false);
 
-  baseClasses = 'p-8';
+  baseClasses = 'p-14';
   fullScreenClasses = 'min-h-screen w-screen p-8';
   constructor() {
     effect(() => {
