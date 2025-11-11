@@ -22,7 +22,7 @@
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/org/public"
+            "input": "apps/wanieldeiss/public"
           }
         ],
         "styles": [
