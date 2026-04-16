@@ -1,0 +1,21 @@
+.entry {
+  opacity: 0;
+  transform: translateY(0.75rem);
+  transition:
+    opacity 520ms cubic-bezier(0.22, 0.8, 0.22, 1),
+    transform 520ms cubic-bezier(0.22, 0.8, 0.22, 1);
+}
+
+.entry--visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .entry,
+  .entry--visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

@@ -5,6 +5,17 @@ import {
 } from '../section-header/section-header.component';
 import { ContainerComponent } from '../../ui';
 
+interface KeyFact {
+  readonly value: string;
+  readonly label: string;
+}
+
+const KEY_FACTS: readonly KeyFact[] = [
+  { value: '6+ years', label: 'Leading developer teams' },
+  { value: 'Team Lead', label: 'Current focus' },
+  { value: 'München', label: 'Based in Germany' },
+];
+
 @Component({
   selector: 'wd-about-me',
   standalone: true,
@@ -12,41 +23,67 @@ import { ContainerComponent } from '../../ui';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <wd-container size="page">
+      <wd-section-header index="01" title="About" />
+
       <div
-        class="grid gap-12 md:grid-cols-[minmax(0,14rem)_1fr] md:gap-16 lg:gap-24"
+        class="mt-12 grid gap-10 md:mt-16 md:grid-cols-[1fr_auto] md:items-start md:gap-16"
       >
-        <div class="md:sticky md:top-28 md:self-start">
-          <wd-section-header index="01" title="About" />
-        </div>
+        <p
+          class="max-w-prose font-display text-2xl font-light leading-[1.4] tracking-[var(--tracking-display)] text-fg-strong md:text-3xl"
+        >
+          Platzhalter — erster Satz zum persönlichen Hintergrund und dem
+          Weg, der mich hierher gebracht hat. Platzhalter — zweiter Satz
+          zum fachlichen Fokus und dem, was mich an der Arbeit reizt.
+          Platzhalter — dritter Satz zu Interessen außerhalb des Codes.
+        </p>
 
-        <div class="max-w-prose">
-          <p
-            class="font-display text-2xl font-light leading-[1.35] tracking-[var(--tracking-display)] text-fg-strong md:text-3xl"
-          >
-            I wrote my first function in 2000 using QBasic — mainly as an
-            unconventional way to solve my math homework.
-          </p>
-
+        <div
+          class="order-first mx-auto md:order-none md:mx-0"
+          aria-hidden="true"
+        >
           <div
-            class="mt-10 space-y-6 text-base leading-[var(--leading-prose)] text-fg-muted md:text-lg"
+            class="relative aspect-square w-32 overflow-hidden rounded-full border border-border bg-surface-elevated md:w-40"
           >
-            <p>
-              What started as an experiment quickly turned into a passion that
-              still excites me to this day. Twelve years later, in 2012, I
-              began my first full-time position as a Junior Developer, and
-              even after more than two decades, I'm as fascinated as I was on
-              day one.
-            </p>
-            <p>
-              Today, my focus is on developing web applications, their
-              architecture, and helping the people I lead grow. I love solving
-              complex problems and creating innovative solutions that provide
-              real value, both technically and humanly.
-            </p>
+            <svg
+              viewBox="0 0 128 128"
+              class="h-full w-full text-fg-subtle"
+            >
+              <circle
+                cx="64"
+                cy="50"
+                r="22"
+                fill="currentColor"
+                opacity="0.45"
+              />
+              <path
+                d="M22 120c8-24 24-36 42-36s34 12 42 36"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                opacity="0.45"
+              />
+            </svg>
           </div>
         </div>
       </div>
+
+      <ul class="mt-12 grid gap-4 sm:grid-cols-3 md:mt-16">
+        @for (fact of keyFacts; track fact.label) {
+          <li
+            class="rounded-2xl border border-border bg-surface-elevated/40 p-6"
+          >
+            <p
+              class="font-display text-2xl font-light tracking-[var(--tracking-display)] text-fg-strong md:text-3xl"
+            >
+              {{ fact.value }}
+            </p>
+            <p class="mt-2 text-sm text-fg-muted">{{ fact.label }}</p>
+          </li>
+        }
+      </ul>
     </wd-container>
   `,
 })
-export class AboutMeComponent {}
+export class AboutMeComponent {
+  protected readonly keyFacts = KEY_FACTS;
+}

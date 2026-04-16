@@ -1,0 +1,65 @@
+<wd-container size="page">
+  <div
+    class="grid gap-12 md:grid-cols-[minmax(0,14rem)_1fr] md:gap-16 lg:gap-24"
+  >
+    <div class="md:sticky md:top-28 md:self-start">
+      <wd-section-header index="02" title="Experience" />
+    </div>
+
+    <ol class="m-0 list-none p-0">
+      @for (
+        entry of entries;
+        track entry.company;
+        let index = $index;
+        let last = $last
+      ) {
+        <li
+          #entry
+          class="entry flex gap-6 md:gap-10"
+          [class.entry--visible]="visibleEntries().has(index)"
+        >
+          <div
+            class="relative flex flex-col items-center"
+            aria-hidden="true"
+          >
+            <span
+              class="mt-2 block h-3 w-3 flex-none rounded-full bg-accent"
+            ></span>
+            @if (!last) {
+              <span class="mt-1 w-px flex-1 bg-border"></span>
+            }
+          </div>
+
+          <article class="flex-1 pb-12">
+            <p
+              class="mb-2 text-xs font-medium uppercase tracking-[var(--tracking-eyebrow)] text-fg-muted"
+            >
+              <time>{{ entry.from }}</time>
+              <span aria-hidden="true" class="mx-1">—</span>
+              <time>{{ entry.to }}</time>
+            </p>
+            <h3
+              class="font-display text-2xl font-light leading-[1.15] tracking-[var(--tracking-display)] text-fg-strong md:text-3xl"
+            >
+              {{ entry.role }}
+            </h3>
+            <p class="mb-5 text-fg">{{ entry.company }}</p>
+            <ul class="space-y-2">
+              @for (highlight of entry.highlights; track highlight) {
+                <li
+                  class="flex gap-3 leading-[var(--leading-prose)] text-fg-muted"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="mt-[0.7em] h-1 w-1 flex-none rounded-full bg-accent"
+                  ></span>
+                  <span>{{ highlight }}</span>
+                </li>
+              }
+            </ul>
+          </article>
+        </li>
+      }
+    </ol>
+  </div>
+</wd-container>

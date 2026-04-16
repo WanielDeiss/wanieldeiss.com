@@ -4,12 +4,14 @@ import { HeroComponent } from '../../components/hero/hero.component';
 import { SectionHeaderComponent } from '../../components/section-header/section-header.component';
 import { ContainerComponent } from '../../ui';
 import { AboutMeComponent } from '../../components/about-me/about-me.component';
+import { ExperienceComponent } from '../../components/experience/experience.component';
 
 @Component({
   standalone: true,
   imports: [
     HeroComponent,
     AboutMeComponent,
+    ExperienceComponent,
     SectionHeaderComponent,
     ContainerComponent,
   ],
@@ -23,11 +25,7 @@ import { AboutMeComponent } from '../../components/about-me/about-me.component';
     </section>
 
     <section id="experience" class="scroll-mt-24 py-section">
-      <wd-container size="page">
-        <wd-section-header index="02" title="Experience">
-          <p>Placeholder — content arrives with the experience task.</p>
-        </wd-section-header>
-      </wd-container>
+      <wd-experience />
     </section>
 
     <section id="projects" class="scroll-mt-24 py-section">
