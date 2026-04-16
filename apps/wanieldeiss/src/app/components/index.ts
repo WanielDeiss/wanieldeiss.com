@@ -1,3 +1,4 @@
+export { ExperienceComponent } from './experience/experience.component';
 export { HeroComponent } from './hero/hero.component';
 export { NavComponent } from './nav/nav.component';
 export { ScrollProgressComponent } from './scroll-progress/scroll-progress.component';
