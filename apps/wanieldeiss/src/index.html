@@ -5,7 +5,38 @@
     <title>Daniel Weiß</title>
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!--
+      Editorial typography (Fraunces for display, Inter for body) is
+      self-hosted via the @fontsource-variable/* packages declared in
+      apps/wanieldeiss/project.json → build.options.styles. Keeping the
+      fonts local removes the third-party network dependency, preserves
+      user privacy (GDPR), and resolves the Sonar Web:S5725 hotspot
+      (Subresource Integrity) that applies to remote stylesheets.
+    -->
+
+    <!--
+      Theme boot — runs before the body parses to apply the persisted (or default)
+      theme class on <html>. Prevents a flash of light content on dark default.
+    -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('wd-theme');
+          var theme = stored === 'light' || stored === 'dark' ? stored : 'dark';
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (error) {
+          // localStorage may be blocked (Safari private mode, strict CSP).
+          // Log once so the failure is observable, then fall back to dark.
+          console.warn('[theme-boot] unable to read stored theme', error);
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
   </head>
   <body>
     <wd-root></wd-root>
