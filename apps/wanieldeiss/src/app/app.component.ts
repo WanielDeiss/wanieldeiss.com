@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { DarkModeService } from './services/dark-mode.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -16,6 +16,6 @@ import { HeaderComponent, SocialIconBarComponent } from './components';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
+  private readonly darkModeService = inject(DarkModeService);
   isDarkModeEnabled$ = this.darkModeService.isDarkModeEnabled$;
-  constructor(private readonly darkModeService: DarkModeService) {}
 }

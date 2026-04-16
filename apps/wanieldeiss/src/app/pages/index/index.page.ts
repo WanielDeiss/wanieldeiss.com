@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { FullSizeDirective } from '../../directives/full-size.directive';
 import { FrameCoverComponent } from '../../components/frame-cover/frame-cover.component';
 import { AboutMeComponent } from '../../components/about-me/about-me.component';
@@ -7,11 +7,10 @@ import { AboutMeComponent } from '../../components/about-me/about-me.component';
 @Component({
   standalone: true,
   imports: [
-    CommonModule,
     FullSizeDirective,
     FrameCoverComponent,
-    AboutMeComponent,
-  ],
+    AboutMeComponent
+],
   selector: 'wd-index',
   template: `
     <main>

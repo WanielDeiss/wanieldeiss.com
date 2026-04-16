@@ -8,7 +8,7 @@ describe('IndexComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [IndexPage],
+      imports: [IndexPage],
     }).compileComponents();
 
     fixture = TestBed.createComponent(IndexPage);

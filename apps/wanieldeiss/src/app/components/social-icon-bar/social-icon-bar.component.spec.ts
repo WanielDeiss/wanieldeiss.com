@@ -8,7 +8,7 @@ describe('SocialIconBarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SocialIconBarComponent],
+      imports: [SocialIconBarComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SocialIconBarComponent);

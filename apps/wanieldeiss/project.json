@@ -4,19 +4,16 @@
   "projectType": "application",
   "sourceRoot": "apps/wanieldeiss/src",
   "prefix": "wd",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/wanieldeiss",
         "index": "apps/wanieldeiss/src/index.html",
         "browser": "apps/wanieldeiss/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/wanieldeiss/tsconfig.app.json",
         "inlineStyleLanguage": "css",
         "assets": [
@@ -25,9 +22,7 @@
             "input": "apps/wanieldeiss/public"
           }
         ],
-        "styles": [
-          "apps/wanieldeiss/src/styles.css"
-        ],
+        "styles": ["apps/wanieldeiss/src/styles.css"],
         "scripts": []
       },
       "configurations": {
@@ -49,7 +44,7 @@
         "development": {
           "optimization": false,
           "extractLicenses": false,
-          "sourceMap": true,
+          "sourceMap": true
         }
       },
       "defaultConfiguration": "production"
@@ -64,7 +59,8 @@
           "buildTarget": "wanieldeiss:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
@@ -74,19 +70,15 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": [
-        "{options.outputFile}"
-      ]
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/wanieldeiss/jest.config.ts"
+        "jestConfig": "apps/wanieldeiss/jest.config.ts",
+        "tsConfig": "apps/wanieldeiss/tsconfig.spec.json"
       }
     }
-  },
-  "tags": []
+  }
 }
