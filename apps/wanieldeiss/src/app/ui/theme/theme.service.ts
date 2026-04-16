@@ -28,7 +28,7 @@ export class ThemeService {
       }
       document.documentElement.classList.toggle('dark', next === 'dark');
       try {
-        window.localStorage.setItem(STORAGE_KEY, next);
+        globalThis.localStorage.setItem(STORAGE_KEY, next);
       } catch {
         /* storage unavailable — ignore */
       }
@@ -44,11 +44,11 @@ export class ThemeService {
   }
 
   private readInitialTheme(): Theme {
-    if (typeof window === 'undefined') {
+    if (typeof globalThis.window === 'undefined') {
       return DEFAULT_THEME;
     }
     try {
-      const stored = window.localStorage.getItem(STORAGE_KEY);
+      const stored = globalThis.localStorage.getItem(STORAGE_KEY);
       if (stored === 'light' || stored === 'dark') {
         return stored;
       }

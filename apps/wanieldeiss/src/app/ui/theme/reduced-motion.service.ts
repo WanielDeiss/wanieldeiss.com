@@ -13,10 +13,13 @@ export class ReducedMotionService {
   readonly reducedMotion = signal(this.matchesReducedMotion());
 
   constructor() {
-    if (typeof window === 'undefined' || !window.matchMedia) {
+    if (
+      typeof globalThis.window === 'undefined' ||
+      typeof globalThis.matchMedia !== 'function'
+    ) {
       return;
     }
-    const mql = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const mql = globalThis.matchMedia('(prefers-reduced-motion: reduce)');
     const handler = (event: MediaQueryListEvent): void =>
       this.reducedMotion.set(event.matches);
     mql.addEventListener('change', handler);
@@ -26,9 +29,12 @@ export class ReducedMotionService {
   }
 
   private matchesReducedMotion(): boolean {
-    if (typeof window === 'undefined' || !window.matchMedia) {
+    if (
+      typeof globalThis.window === 'undefined' ||
+      typeof globalThis.matchMedia !== 'function'
+    ) {
       return false;
     }
-    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    return globalThis.matchMedia('(prefers-reduced-motion: reduce)').matches;
   }
 }

@@ -29,7 +29,10 @@
           if (theme === 'dark') {
             document.documentElement.classList.add('dark');
           }
-        } catch (e) {
+        } catch (error) {
+          // localStorage may be blocked (Safari private mode, strict CSP).
+          // Log once so the failure is observable, then fall back to dark.
+          console.warn('[theme-boot] unable to read stored theme', error);
           document.documentElement.classList.add('dark');
         }
       })();
