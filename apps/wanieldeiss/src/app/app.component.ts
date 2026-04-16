@@ -1,21 +1,24 @@
-import { Component, inject } from '@angular/core';
-import { DarkModeService } from './services/dark-mode.service';
-import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { HeaderComponent, SocialIconBarComponent } from './components';
+
+import {
+  NavComponent,
+  ScrollProgressComponent,
+  SkipLinkComponent,
+  SocialIconBarComponent,
+} from './components';
 
 @Component({
   standalone: true,
   imports: [
-    CommonModule,
     RouterModule,
-    HeaderComponent,
+    NavComponent,
+    ScrollProgressComponent,
+    SkipLinkComponent,
     SocialIconBarComponent,
   ],
   selector: 'wd-root',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './app.component.html',
 })
-export class AppComponent {
-  private readonly darkModeService = inject(DarkModeService);
-  isDarkModeEnabled$ = this.darkModeService.isDarkModeEnabled$;
-}
+export class AppComponent {}

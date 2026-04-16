@@ -172,6 +172,23 @@
 }
 
 /* ---------------------------------------------------------------------------
+   Shared utilities
+   ---------------------------------------------------------------------------
+   `focus-ring` is the project's single focus-visible treatment. Pinning it in
+   a custom utility keeps nav links, buttons, skip-link, and CTAs consistent
+   and lets component CSS files stay within the 2 KB budget defined in
+   `project.json` without repeating identical rules.
+*/
+@utility focus-ring {
+  outline: none;
+  &:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+  }
+}
+
+/* ---------------------------------------------------------------------------
    prefers-reduced-motion — respect the user globally
    ---------------------------------------------------------------------------
    Tailwind v4 ships `motion-safe:` / `motion-reduce:` variants out of the box;

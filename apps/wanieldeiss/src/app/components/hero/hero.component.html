@@ -1,0 +1,87 @@
+<wd-container size="page">
+  <section
+    class="flex min-h-[calc(100svh-6rem)] flex-col justify-center py-section"
+  >
+    <p
+      class="mb-6 text-xs font-medium uppercase tracking-[var(--tracking-eyebrow)] text-fg-muted"
+    >
+      Portfolio
+    </p>
+
+    <h1
+      class="mb-8 font-display text-[clamp(3rem,9vw,7.5rem)] font-light leading-[1.02] tracking-[var(--tracking-display)] text-fg-strong"
+    >
+      Daniel Weiß
+    </h1>
+
+    <div
+      class="mb-10 flex flex-wrap items-baseline gap-x-3 gap-y-1 font-display text-[clamp(1.5rem,3.2vw,2.75rem)] leading-[1.15] text-fg"
+      (mouseenter)="onPointerEnter()"
+      (mouseleave)="onPointerLeave()"
+    >
+      <span class="italic text-fg-muted">I am</span>
+      <span class="role-slot">
+        @if (leavingRole(); as leaving) {
+          <span class="role role--leaving" aria-hidden="true">{{ leaving }}</span>
+        }
+        <span
+          class="role"
+          [class.role--entering]="leavingRole() !== null"
+        >{{ currentRole() }}</span>
+      </span>
+    </div>
+
+    <p
+      class="mb-12 max-w-prose text-lg leading-[var(--leading-prose)] text-fg-muted"
+    >
+      I build thoughtful web applications and lead the teams that ship them —
+      the kind of work that rewards clarity, quiet rigour, and genuine
+      curiosity about the craft.
+    </p>
+
+    <div class="flex flex-wrap items-center gap-3">
+      <a
+        href="#contact"
+        class="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-fg-on-accent transition-colors hover:bg-accent-hover focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
+      >
+        Let's talk
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.75"
+          class="h-4 w-4"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M5 12h14M13 5l7 7-7 7"
+          />
+        </svg>
+      </a>
+
+      <a
+        href="/daniel-weiss-cv.pdf"
+        download
+        class="inline-flex items-center gap-2 rounded-full border border-border-strong px-6 py-3 text-sm font-medium text-fg-strong transition-colors hover:border-fg-strong focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
+      >
+        Download CV
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.75"
+          class="h-4 w-4"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"
+          />
+        </svg>
+      </a>
+    </div>
+  </section>
+</wd-container>

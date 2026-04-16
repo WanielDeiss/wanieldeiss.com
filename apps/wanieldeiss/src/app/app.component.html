@@ -1,5 +1,7 @@
-<div [ngClass]="{ dark: isDarkModeEnabled$ | async }">
-  <wd-header />
+<wd-skip-link />
+<wd-scroll-progress />
+<wd-nav />
+<main id="main-content" tabindex="-1">
   <router-outlet></router-outlet>
-  <wd-social-icon-bar />
-</div>
+</main>
+<wd-social-icon-bar />
