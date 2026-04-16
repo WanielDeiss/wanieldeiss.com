@@ -1,0 +1,68 @@
+/*
+ * The rotating-role viewport.
+ *
+ * A fixed-height, overflow-clipped inline block that pins a minimum width
+ * wide enough to hold the longest role in the set — this is what keeps the
+ * baseline from jumping when the role changes. The two role children are
+ * absolutely positioned on top of each other so the entering role slides
+ * up while the leaving role slides out the top.
+ */
+.role-slot {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: baseline;
+  min-width: 19ch; /* comfortably fits "Software Developer" */
+  height: 1.15em;
+}
+
+.role {
+  position: absolute;
+  inset: 0;
+  display: inline-block;
+  white-space: nowrap;
+  color: var(--accent);
+  will-change: transform, opacity;
+}
+
+.role--entering {
+  animation: hero-role-enter 520ms cubic-bezier(0.22, 0.8, 0.22, 1) both;
+}
+
+.role--leaving {
+  animation: hero-role-leave 520ms cubic-bezier(0.22, 0.8, 0.22, 1) both;
+}
+
+@keyframes hero-role-enter {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes hero-role-leave {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+/*
+ * Component-local reduced-motion guard on top of the global one in
+ * styles.css, so the role simply swaps without animation. The rotation
+ * itself is suppressed in the component logic.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .role--entering,
+  .role--leaving {
+    animation: none;
+  }
+}
