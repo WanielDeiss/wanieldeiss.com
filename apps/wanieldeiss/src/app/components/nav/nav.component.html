@@ -1,0 +1,110 @@
+<div data-scroll-sentinel class="absolute top-0 h-px w-px"></div>
+
+<header [class]="headerClass()" role="banner">
+  <wd-container size="page">
+    <div class="flex h-16 items-center justify-between md:h-20">
+      <a
+        href="#top"
+        (click)="onLogoClick($event)"
+        aria-label="Daniel Weiß — home"
+        class="focus-ring font-display text-xl font-medium tracking-[var(--tracking-display)] text-fg-strong"
+      >
+        DW
+      </a>
+
+      <nav aria-label="Primary" class="hidden md:block">
+        <ul class="flex items-center gap-8">
+          @for (link of links; track link.id) {
+            <li>
+              <a
+                [href]="'#' + link.id"
+                (click)="onNavClick(link.id, $event)"
+                [attr.aria-current]="
+                  activeSection() === link.id ? 'location' : null
+                "
+                class="focus-ring text-sm text-fg-muted transition-colors hover:text-fg-strong aria-[current=location]:text-fg-strong"
+              >
+                {{ link.label }}
+              </a>
+            </li>
+          }
+        </ul>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <wd-theme-toggle />
+        <button
+          type="button"
+          class="focus-ring inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-fg-muted transition-colors hover:border-border-strong hover:text-fg-strong md:hidden"
+          (click)="toggleMenu()"
+          [attr.aria-expanded]="menuOpen()"
+          aria-controls="mobile-nav-panel"
+          aria-label="Toggle navigation"
+        >
+          @if (menuOpen()) {
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.75"
+              class="h-4 w-4"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 6l12 12M18 6L6 18"
+              />
+            </svg>
+          } @else {
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.75"
+              class="h-4 w-4"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 7h16M4 12h16M4 17h16"
+              />
+            </svg>
+          }
+        </button>
+      </div>
+    </div>
+  </wd-container>
+</header>
+
+<div
+  #panel
+  id="mobile-nav-panel"
+  class="mobile-panel fixed inset-0 z-40 flex flex-col bg-surface md:hidden"
+  [attr.data-open]="menuOpen()"
+  [attr.aria-hidden]="!menuOpen()"
+  [attr.inert]="menuOpen() ? null : ''"
+>
+  <div class="h-16 md:h-20"></div>
+  <nav aria-label="Mobile" class="flex-1 overflow-y-auto">
+    <wd-container size="page">
+      <ul class="flex flex-col gap-6 py-12">
+        @for (link of links; track link.id) {
+          <li>
+            <a
+              [href]="'#' + link.id"
+              (click)="onNavClick(link.id, $event)"
+              [attr.aria-current]="
+                activeSection() === link.id ? 'location' : null
+              "
+              class="focus-ring block font-display text-3xl font-light tracking-[var(--tracking-display)] text-fg-muted transition-colors hover:text-fg-strong aria-[current=location]:text-fg-strong"
+            >
+              {{ link.label }}
+            </a>
+          </li>
+        }
+      </ul>
+    </wd-container>
+  </nav>
+</div>
