@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-import { FullSizeDirective } from '../../directives/full-size.directive';
 import { HeroComponent } from '../../components/hero/hero.component';
 import { SectionHeaderComponent } from '../../components/section-header/section-header.component';
 import { ContainerComponent } from '../../ui';
@@ -9,7 +8,6 @@ import { AboutMeComponent } from '../../components/about-me/about-me.component';
 @Component({
   standalone: true,
   imports: [
-    FullSizeDirective,
     HeroComponent,
     AboutMeComponent,
     SectionHeaderComponent,
@@ -21,9 +19,7 @@ import { AboutMeComponent } from '../../components/about-me/about-me.component';
     <wd-hero />
 
     <section id="about" class="scroll-mt-24 py-section">
-      <div class="flex justify-center items-center" wdFullSize="odd">
-        <wd-about-me />
-      </div>
+      <wd-about-me />
     </section>
 
     <section id="experience" class="scroll-mt-24 py-section">
