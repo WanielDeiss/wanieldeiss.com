@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { TypingDirective } from '../../directives/typing.directive';
 
 @Component({
   selector: 'wd-frame-cover',
   standalone: true,
-  imports: [CommonModule, TypingDirective],
+  imports: [TypingDirective],
   template: `
     <div>
       <span

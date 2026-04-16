@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { TypingDirective } from '../../directives/typing.directive';
 
 @Component({
   selector: 'wd-about-me',
   standalone: true,
-  imports: [CommonModule, TypingDirective],
+  imports: [TypingDirective],
   template: `
     <div class="flex-row md:flex gap-8">
       <div

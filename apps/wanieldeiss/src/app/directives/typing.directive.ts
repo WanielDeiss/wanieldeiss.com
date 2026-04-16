@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Input, OnInit } from '@angular/core';
+import { Directive, ElementRef, Input, OnInit, inject } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Directive({
@@ -6,6 +6,8 @@ import { BehaviorSubject } from 'rxjs';
   selector: '[wdTyping]',
 })
 export class TypingDirective implements OnInit {
+  private readonly elRef = inject(ElementRef);
+
   typeSpeed = 100;
   showWordInSec = 3000;
 
@@ -16,8 +18,6 @@ export class TypingDirective implements OnInit {
   }
 
   currentWord$ = new BehaviorSubject<[string, number]>(['', 0]);
-
-  constructor(private readonly elRef: ElementRef) {}
 
   ngOnInit(): void {
     this.currentWord$.subscribe(([word, index]) => {

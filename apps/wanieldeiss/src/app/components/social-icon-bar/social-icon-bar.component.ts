@@ -1,27 +1,29 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 
 @Component({
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   selector: 'wd-social-icon-bar',
   template: `
     <div
       class="fixed bottom-4 md:bottom-0 right-0 md:right-12 flex md:flex-col md:space-y-4 md:space-x-0 space-x-4 flex-row text-sky-800 dark:text-sky-50 items-center"
-    >
-      <a [href]="link.link" target="_blank" *ngFor="let link of socialLinks">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path [attr.d]="link.svgPath" />
-        </svg>
-      </a>
+      >
+      @for (link of socialLinks; track link) {
+        <a [href]="link.link" target="_blank">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            >
+            <path [attr.d]="link.svgPath" />
+          </svg>
+        </a>
+      }
       <div class="bg-sky-800 dark:bg-sky-50 md:h-32 md:w-0.5 h-0.5 w-32"></div>
     </div>
-  `,
+    `,
 })
 export class SocialIconBarComponent {
   socialLinks = [

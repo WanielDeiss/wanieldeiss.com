@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { DarkModeService } from '../../services/dark-mode.service';
 import { CommonModule } from '@angular/common';
 
@@ -9,9 +9,8 @@ import { CommonModule } from '@angular/common';
   templateUrl: './header.component.html',
 })
 export class HeaderComponent {
+  private readonly darkModeService = inject(DarkModeService);
   isDarkModeEnabled$ = this.darkModeService.isDarkModeEnabled$;
-
-  constructor(private readonly darkModeService: DarkModeService) {}
 
   click(section: string) {
     document.getElementById(section)?.scrollIntoView({

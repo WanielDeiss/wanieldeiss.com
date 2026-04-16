@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Cv } from '@dan/interfaces';
 
@@ -6,7 +6,7 @@ import { Cv } from '@dan/interfaces';
   providedIn: 'root',
 })
 export class CvService {
-  constructor(private readonly httpClient: HttpClient) {}
+  private readonly httpClient = inject(HttpClient);
 
   getAll() {
     return this.httpClient.get<Cv[]>('/assets/data/cv.json');
