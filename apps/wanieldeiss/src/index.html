@@ -8,13 +8,14 @@
     <meta name="color-scheme" content="dark light" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-    <!-- Editorial typography: Fraunces (display) + Inter (body) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter:wght@400;500;600;700&display=swap"
-    />
+    <!--
+      Editorial typography (Fraunces for display, Inter for body) is
+      self-hosted via the @fontsource-variable/* packages declared in
+      apps/wanieldeiss/project.json → build.options.styles. Keeping the
+      fonts local removes the third-party network dependency, preserves
+      user privacy (GDPR), and resolves the Sonar Web:S5725 hotspot
+      (Subresource Integrity) that applies to remote stylesheets.
+    -->
 
     <!--
       Theme boot — runs before the body parses to apply the persisted (or default)
