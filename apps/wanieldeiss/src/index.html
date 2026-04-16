@@ -5,7 +5,34 @@
     <title>Daniel Weiß</title>
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- Editorial typography: Fraunces (display) + Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter:wght@400;500;600;700&display=swap"
+    />
+
+    <!--
+      Theme boot — runs before the body parses to apply the persisted (or default)
+      theme class on <html>. Prevents a flash of light content on dark default.
+    -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('wd-theme');
+          var theme = stored === 'light' || stored === 'dark' ? stored : 'dark';
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
   </head>
   <body>
     <wd-root></wd-root>
