@@ -74,7 +74,7 @@ export class ScrollProgressComponent {
   }
 
   private sync(): void {
-    if (typeof globalThis.window === 'undefined') {
+    if (globalThis.window === undefined) {
       return;
     }
     const doc = document.documentElement;

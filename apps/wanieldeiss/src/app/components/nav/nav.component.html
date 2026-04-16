@@ -39,8 +39,10 @@
           (click)="toggleMenu()"
           [attr.aria-expanded]="menuOpen()"
           aria-controls="mobile-nav-panel"
-          aria-label="Toggle navigation"
         >
+          <span class="sr-only">
+            {{ menuOpen() ? 'Close navigation' : 'Open navigation' }}
+          </span>
           @if (menuOpen()) {
             <svg
               viewBox="0 0 24 24"

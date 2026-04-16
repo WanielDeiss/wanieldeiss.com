@@ -116,7 +116,7 @@ export class NavComponent {
     }
     const behavior: ScrollBehavior = this.reducedMotion() ? 'auto' : 'smooth';
     target.scrollIntoView({ behavior, block: 'start' });
-    if (typeof globalThis.history !== 'undefined') {
+    if (globalThis.history !== undefined) {
       globalThis.history.replaceState(null, '', `#${id}`);
     }
   }
@@ -124,12 +124,12 @@ export class NavComponent {
   protected onLogoClick(event: Event): void {
     event.preventDefault();
     this.closeMenu();
-    if (typeof globalThis.window === 'undefined') {
+    if (globalThis.window === undefined) {
       return;
     }
     const behavior: ScrollBehavior = this.reducedMotion() ? 'auto' : 'smooth';
     globalThis.scrollTo({ top: 0, behavior });
-    if (typeof globalThis.history !== 'undefined') {
+    if (globalThis.history !== undefined) {
       globalThis.history.replaceState(null, '', globalThis.location.pathname);
     }
   }
@@ -159,7 +159,7 @@ export class NavComponent {
       return;
     }
     const first = focusables[0];
-    const last = focusables[focusables.length - 1];
+    const last = focusables.at(-1) ?? first;
     const active = document.activeElement as HTMLElement | null;
     if (event.shiftKey && active === first) {
       event.preventDefault();
@@ -171,7 +171,7 @@ export class NavComponent {
   }
 
   private observeScrollSentinel(): void {
-    if (typeof globalThis.IntersectionObserver === 'undefined') {
+    if (globalThis.IntersectionObserver === undefined) {
       return;
     }
     const sentinel = this.host.nativeElement.querySelector<HTMLElement>(
@@ -192,7 +192,7 @@ export class NavComponent {
   }
 
   private observeSections(): void {
-    if (typeof globalThis.IntersectionObserver === 'undefined') {
+    if (globalThis.IntersectionObserver === undefined) {
       return;
     }
     const sections = this.links
