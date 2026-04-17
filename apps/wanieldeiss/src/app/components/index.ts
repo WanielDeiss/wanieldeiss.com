@@ -1,4 +1,6 @@
+export { ContactComponent } from './contact/contact.component';
 export { ExperienceComponent } from './experience/experience.component';
+export { FooterComponent } from './footer/footer.component';
 export { HeroComponent } from './hero/hero.component';
 export { NavComponent } from './nav/nav.component';
 export { ProjectsComponent } from './projects/projects.component';
