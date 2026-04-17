@@ -10,19 +10,19 @@ export interface ContactLink {
 export const CONTACT_LINKS: readonly ContactLink[] = [
   {
     label: 'Email',
-    href: 'mailto:hello@example.com',
+    href: 'mailto:wanieldeiss@gmail.com',
     icon: Mail,
     external: false,
   },
   {
     label: 'LinkedIn',
-    href: 'https://linkedin.com/in/placeholder',
+    href: 'https://www.linkedin.com/in/wanieldeiss',
     icon: Linkedin,
     external: true,
   },
   {
     label: 'GitHub',
-    href: 'https://github.com/placeholder',
+    href: 'https://github.com/wanieldeiss',
     icon: Github,
     external: true,
   },
