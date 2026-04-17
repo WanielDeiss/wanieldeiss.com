@@ -29,14 +29,20 @@ describe('NavComponent', () => {
     expect((logo.nativeElement as HTMLElement).textContent?.trim()).toBe('DW');
   });
 
-  it('should render all four section anchors with correct hrefs', () => {
+  it('should render all section anchors with correct hrefs', () => {
     const anchors = fixture.debugElement.queryAll(
       By.css('nav[aria-label="Primary"] a'),
     );
     const hrefs = anchors.map((a) =>
       (a.nativeElement as HTMLAnchorElement).getAttribute('href'),
     );
-    expect(hrefs).toEqual(['#about', '#experience', '#projects', '#contact']);
+    expect(hrefs).toEqual([
+      '#about',
+      '#stack',
+      '#experience',
+      '#projects',
+      '#contact',
+    ]);
   });
 
   it('should render the theme toggle', () => {
