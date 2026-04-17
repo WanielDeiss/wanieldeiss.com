@@ -1,7 +1,9 @@
 export { ExperienceComponent } from './experience/experience.component';
 export { HeroComponent } from './hero/hero.component';
 export { NavComponent } from './nav/nav.component';
+export { ProjectsComponent } from './projects/projects.component';
 export { ScrollProgressComponent } from './scroll-progress/scroll-progress.component';
 export { SectionHeaderComponent } from './section-header/section-header.component';
 export { SkipLinkComponent } from './skip-link/skip-link.component';
 export { SocialIconBarComponent } from './social-icon-bar/social-icon-bar.component';
+export { StackComponent } from './stack/stack.component';

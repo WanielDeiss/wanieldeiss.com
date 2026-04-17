@@ -3,6 +3,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {
   SectionHeaderComponent,
 } from '../section-header/section-header.component';
+import { CardComponent } from '../../ui/card/card.component';
 import { ContainerComponent } from '../../ui';
 
 interface KeyFact {
@@ -19,7 +20,7 @@ const KEY_FACTS: readonly KeyFact[] = [
 @Component({
   selector: 'wd-about-me',
   standalone: true,
-  imports: [ContainerComponent, SectionHeaderComponent],
+  imports: [ContainerComponent, SectionHeaderComponent, CardComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <wd-container size="page">
@@ -69,16 +70,14 @@ const KEY_FACTS: readonly KeyFact[] = [
 
       <ul class="mt-12 grid gap-4 sm:grid-cols-3 md:mt-16">
         @for (fact of keyFacts; track fact.label) {
-          <li
-            class="rounded-2xl border border-border bg-surface-elevated/40 p-6"
-          >
+          <wd-card>
             <p
               class="font-display text-2xl font-light tracking-[var(--tracking-display)] text-fg-strong md:text-3xl"
             >
               {{ fact.value }}
             </p>
             <p class="mt-2 text-sm text-fg-muted">{{ fact.label }}</p>
-          </li>
+          </wd-card>
         }
       </ul>
     </wd-container>
