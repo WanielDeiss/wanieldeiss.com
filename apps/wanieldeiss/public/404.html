@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Daniel Weiß</title>
+    <script>
+      // SPA fallback for GitHub Pages — redirects all 404s back to index
+      // with the original path encoded in the URL so the Angular router
+      // can resolve it client-side.
+      var segment = 0;
+      var location = window.location;
+      location.replace(
+        location.protocol +
+          '//' +
+          location.hostname +
+          (location.port ? ':' + location.port : '') +
+          '/' +
+          location.pathname
+            .slice(1)
+            .split('/')
+            .slice(segment)
+            .join('/') +
+          (location.search ? location.search : '') +
+          location.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
