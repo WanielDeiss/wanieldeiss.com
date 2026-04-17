@@ -6,6 +6,7 @@ import {
   ScrollProgressComponent,
   SkipLinkComponent,
   SocialIconBarComponent,
+  FooterComponent,
 } from './components';
 
 @Component({
@@ -16,6 +17,7 @@ import {
     ScrollProgressComponent,
     SkipLinkComponent,
     SocialIconBarComponent,
+    FooterComponent,
   ],
   selector: 'wd-root',
   changeDetection: ChangeDetectionStrategy.OnPush,
