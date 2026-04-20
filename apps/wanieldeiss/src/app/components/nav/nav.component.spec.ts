@@ -40,7 +40,6 @@ describe('NavComponent', () => {
       '#about',
       '#stack',
       '#experience',
-      '#projects',
       '#contact',
     ]);
   });

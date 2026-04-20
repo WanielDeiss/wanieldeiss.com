@@ -13,34 +13,36 @@ export interface Experience {
 
 export const EXPERIENCE: readonly Experience[] = [
   {
-    from: '2022',
+    from: '2026',
     to: 'Present',
-    role: 'Placeholder Role — Current',
-    company: 'Placeholder Company 1',
+    role: 'Circle Lead',
+    company: 'ADITO Software GmbH',
     highlights: [
-      'Platzhalter-Achievement — konkretes Ergebnis, Zahl oder Impact.',
-      'Platzhalter-Achievement — konkretes Ergebnis, Zahl oder Impact.',
-      'Platzhalter-Achievement — konkretes Ergebnis, Zahl oder Impact.',
+      'Technical leadership of a cross-functional Kanban team building the internal web client on the ADITO CRM platform (Rhino/JavaScript, MariaDB).',
+      'Establishing engineering practices across code review, testing strategies, and technical documentation.',
+      'Aligning Product Management, UX, and Development while identifying and reducing technical debt in the existing codebase.',
     ],
   },
   {
     from: '2018',
-    to: '2022',
-    role: 'Placeholder Role — Senior',
-    company: 'Placeholder Company 2',
+    to: '2025',
+    role: 'Team Lead',
+    company: 'Grollmus München GmbH',
     highlights: [
-      'Platzhalter-Achievement — konkretes Ergebnis, Zahl oder Impact.',
-      'Platzhalter-Achievement — konkretes Ergebnis, Zahl oder Impact.',
+      'Led two cross-functional Scrum teams (up to 7 engineers) delivering Angular-based web applications.',
+      'Planned and executed the migration of a 500+ component application from AngularJS to Angular, including team development and risk management.',
+      'Built CI/CD pipelines on Azure DevOps and cloud infrastructure with Terraform; member of the internal Architecture Board since 2020.',
+      'Ran internal trainings on architecture, software supply chains, and web fundamentals; actively involved in hiring, screening, and onboarding.',
     ],
   },
   {
-    from: '2015',
+    from: '2016',
     to: '2018',
-    role: 'Placeholder Role — Junior',
-    company: 'Placeholder Company 3',
+    role: 'Head of Web Development',
+    company: 'SPIEGLHOF media GmbH',
     highlights: [
-      'Platzhalter-Achievement — konkretes Ergebnis, Zahl oder Impact.',
-      'Platzhalter-Achievement — konkretes Ergebnis, Zahl oder Impact.',
+      'Built and led the web development team from the ground up.',
+      'Defined coding guidelines and training structures around React, Node.js, and MongoDB.',
     ],
   },
 ];

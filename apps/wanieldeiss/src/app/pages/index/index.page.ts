@@ -4,7 +4,6 @@ import { HeroComponent } from '../../components/hero/hero.component';
 import { AboutMeComponent } from '../../components/about-me/about-me.component';
 import { StackComponent } from '../../components/stack/stack.component';
 import { ExperienceComponent } from '../../components/experience/experience.component';
-import { ProjectsComponent } from '../../components/projects/projects.component';
 import { ContactComponent } from '../../components/contact/contact.component';
 
 @Component({
@@ -14,7 +13,6 @@ import { ContactComponent } from '../../components/contact/contact.component';
     AboutMeComponent,
     StackComponent,
     ExperienceComponent,
-    ProjectsComponent,
     ContactComponent,
   ],
   selector: 'wd-index',
@@ -32,10 +30,6 @@ import { ContactComponent } from '../../components/contact/contact.component';
 
     <section id="experience" class="scroll-mt-24 py-section">
       <wd-experience />
-    </section>
-
-    <section id="projects" class="scroll-mt-24 py-section">
-      <wd-projects />
     </section>
 
     <section id="contact" class="scroll-mt-24 py-section">

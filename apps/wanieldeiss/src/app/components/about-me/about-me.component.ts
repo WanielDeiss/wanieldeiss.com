@@ -32,10 +32,15 @@ const KEY_FACTS: readonly KeyFact[] = [
         <p
           class="max-w-prose font-display text-2xl font-light leading-[1.4] tracking-[var(--tracking-display)] text-fg-strong md:text-3xl"
         >
-          Platzhalter — erster Satz zum persönlichen Hintergrund und dem
-          Weg, der mich hierher gebracht hat. Platzhalter — zweiter Satz
-          zum fachlichen Fokus und dem, was mich an der Arbeit reizt.
-          Platzhalter — dritter Satz zu Interessen außerhalb des Codes.
+          I took the long way in — IHK-apprenticed as a media designer
+          before drifting into code, and I've been shaping web teams and
+          architectures ever since, across agencies, startups, and
+          enterprise CRM. What keeps me interested is the
+          boring-but-load-bearing stuff: clean architectures, developer
+          experience, and building engineering teams where people
+          actually want to ship. Off the clock I automate too much of my
+          home with Raspberry Pis, run tabletop campaigns, and lose
+          hours to boardgames and late-night meetup conversations.
         </p>
 
         <div

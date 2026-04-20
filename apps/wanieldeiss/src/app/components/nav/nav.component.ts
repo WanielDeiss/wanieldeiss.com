@@ -27,7 +27,6 @@ const NAV_LINKS: readonly NavLink[] = [
   { id: 'about', label: 'About' },
   { id: 'stack', label: 'Stack' },
   { id: 'experience', label: 'Experience' },
-  { id: 'projects', label: 'Projects' },
   { id: 'contact', label: 'Contact' },
 ];
 
