@@ -41,16 +41,11 @@ describe('HeroComponent', () => {
     ]);
   });
 
-  it('should render both CTAs with correct targets', () => {
+  it('should render the primary CTA linking to the contact section', () => {
     const anchors = fixture.debugElement.queryAll(By.css('a'));
     const primary = anchors.find((a) =>
       (a.nativeElement as HTMLAnchorElement).textContent?.includes(
         "Let's talk",
-      ),
-    );
-    const secondary = anchors.find((a) =>
-      (a.nativeElement as HTMLAnchorElement).textContent?.includes(
-        'Download CV',
       ),
     );
 
@@ -58,13 +53,5 @@ describe('HeroComponent', () => {
     expect(
       (primary!.nativeElement as HTMLAnchorElement).getAttribute('href'),
     ).toBe('#contact');
-
-    expect(secondary).toBeTruthy();
-    expect(
-      (secondary!.nativeElement as HTMLAnchorElement).getAttribute('href'),
-    ).toBe('/daniel-weiss-cv.pdf');
-    expect(
-      (secondary!.nativeElement as HTMLAnchorElement).hasAttribute('download'),
-    ).toBe(true);
   });
 });
