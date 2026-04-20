@@ -29,7 +29,7 @@ export const EXPERIENCE: readonly Experience[] = [
     role: 'Team Lead',
     company: 'Grollmus München GmbH',
     highlights: [
-      'Led two cross-functional Scrum teams (up to 7 engineers) delivering Angular-based web applications.',
+      'Led two cross-functional Scrum teams delivering Angular-based web applications.',
       'Planned and executed the migration of a 500+ component application from AngularJS to Angular, including team development and risk management.',
       'Built CI/CD pipelines on Azure DevOps and cloud infrastructure with Terraform; member of the internal Architecture Board since 2020.',
       'Ran internal trainings on architecture, software supply chains, and web fundamentals; actively involved in hiring, screening, and onboarding.',
