@@ -16,7 +16,7 @@ Nx Cloud is explicitly disabled (`neverConnectToCloud: true` in `nx.json`).
 
 ## Architecture
 
-**Nx 22.6 monorepo, single Angular 21 app.** `apps/wanieldeiss` is the portfolio; `apps/wanieldeiss-e2e` is Playwright. `tsconfig.base.json` declares a `@dan/interfaces` path alias pointing at `libs/interfaces/src/index.ts`, but no `libs/` exists yet — create it if shared types are needed, don't add new apps for them.
+**Nx 22.6 monorepo, single Angular 21 app.** `apps/wanieldeiss` is the portfolio; `apps/wanieldeiss-e2e` is Playwright. There is no `libs/` directory and no shared-type path alias — section data and its types are colocated in `*.data.ts` files next to the component that owns them (see [experience.data.ts](apps/wanieldeiss/src/app/components/experience/experience.data.ts), where `interface Experience` lives alongside the `EXPERIENCE` array). If shared types do become necessary, add a `libs/interfaces/` lib — don't spin up a new app.
 
 **Single-page portfolio, not a multi-route app.** Routes in [apps/wanieldeiss/src/app/app.routes.ts](apps/wanieldeiss/src/app/app.routes.ts) are `''` → `IndexPage`, `not-found` → `NotFoundPage`, `**` → redirect to `not-found`. [IndexPage](apps/wanieldeiss/src/app/pages/index/index.page.ts) composes every section (hero, about, stack, experience, projects, contact) into one long-scroll page with anchor ids (`#about`, `#stack`, …). "Add a page" usually means "add a section component to IndexPage," not a new route.
 
