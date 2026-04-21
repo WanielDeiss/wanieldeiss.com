@@ -7,10 +7,14 @@ import { Component } from '@angular/core';
   selector: 'wd-social-icon-bar',
   template: `
     <div
-      class="fixed bottom-4 md:bottom-0 right-0 md:right-12 flex md:flex-col md:space-y-4 md:space-x-0 space-x-4 flex-row text-sky-800 dark:text-sky-50 items-center"
+      class="fixed bottom-4 md:bottom-0 right-0 md:right-12 flex md:flex-col md:space-y-4 md:space-x-0 space-x-4 flex-row text-accent items-center"
       >
       @for (link of socialLinks; track link) {
-        <a [href]="link.link" target="_blank">
+        <a
+          [href]="link.link"
+          target="_blank"
+          class="transition-colors hover:text-accent-hover"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5"
@@ -21,7 +25,7 @@ import { Component } from '@angular/core';
           </svg>
         </a>
       }
-      <div class="bg-sky-800 dark:bg-sky-50 md:h-32 md:w-0.5 h-0.5 w-32"></div>
+      <div class="bg-accent md:h-32 md:w-0.5 h-0.5 w-32"></div>
     </div>
     `,
 })
