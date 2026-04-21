@@ -15,11 +15,11 @@
     </h1>
 
     <div
-      class="mb-10 flex flex-wrap items-baseline gap-x-3 gap-y-1 font-display text-[clamp(1.5rem,3.2vw,2.75rem)] leading-[1.15] text-fg"
+      class="mb-10 flex flex-nowrap items-baseline gap-x-3 gap-y-1 font-display text-[clamp(1.5rem,3.2vw,2.75rem)] leading-[1.15] text-fg"
       (mouseenter)="onPointerEnter()"
       (mouseleave)="onPointerLeave()"
     >
-      <span class="italic text-fg-muted">I am</span>
+      <span class="italic text-fg-muted">I am a</span>
       <span class="role-slot">
         @if (leavingRole(); as leaving) {
           <span class="role role--leaving" aria-hidden="true">{{ leaving }}</span>
