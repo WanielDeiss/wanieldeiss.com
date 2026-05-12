@@ -7,7 +7,10 @@ import {
   SkipLinkComponent,
   SocialIconBarComponent,
   FooterComponent,
+  KonamiComponent,
 } from './components';
+
+import { CursorDotComponent } from './ui';
 
 @Component({
   standalone: true,
@@ -18,6 +21,8 @@ import {
     SkipLinkComponent,
     SocialIconBarComponent,
     FooterComponent,
+    CursorDotComponent,
+    KonamiComponent,
   ],
   selector: 'wd-root',
   changeDetection: ChangeDetectionStrategy.OnPush,

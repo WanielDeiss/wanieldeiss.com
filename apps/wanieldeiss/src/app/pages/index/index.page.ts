@@ -22,23 +22,23 @@ import { ContactComponent } from '../../components/contact/contact.component';
   template: `
     <wd-hero />
 
-    <section id="about" class="scroll-mt-24 py-section">
+    <section id="about" aria-labelledby="heading-about" class="scroll-mt-24 py-section">
       <wd-about-me />
     </section>
 
-    <section id="stack" class="scroll-mt-24 py-section">
+    <section id="stack" aria-labelledby="heading-stack" class="scroll-mt-24 py-section">
       <wd-stack />
     </section>
 
-    <section id="experience" class="scroll-mt-24 py-section">
+    <section id="experience" aria-labelledby="heading-experience" class="scroll-mt-24 py-section">
       <wd-experience />
     </section>
 
-    <section id="projects" class="scroll-mt-24 py-section">
+    <section id="projects" aria-labelledby="heading-projects" class="scroll-mt-24 py-section">
       <wd-projects />
     </section>
 
-    <section id="contact" class="scroll-mt-24 py-section">
+    <section id="contact" aria-labelledby="heading-contact" class="scroll-mt-24 py-section">
       <wd-contact />
     </section>
   `,

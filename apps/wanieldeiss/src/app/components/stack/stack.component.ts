@@ -14,7 +14,7 @@ import { STACK } from './stack.data';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <wd-container size="page">
-      <wd-section-header index="02" title="Stack" />
+      <wd-section-header index="02" title="Stack" headingId="heading-stack" />
 
       <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         @for (group of groups; track group.title) {
@@ -24,15 +24,15 @@ import { STACK } from './stack.data';
             >
               {{ group.title }}
             </h3>
-            <div class="mt-4 flex flex-wrap gap-2">
+            <ul class="mt-4 flex flex-wrap gap-2">
               @for (skill of group.skills; track skill) {
-                <span
+                <li
                   class="inline-flex rounded-full border border-border bg-surface px-3 py-1 text-xs text-fg-muted transition-colors hover:border-accent hover:text-fg-strong"
                 >
                   {{ skill }}
-                </span>
+                </li>
               }
-            </div>
+            </ul>
           </wd-card>
         }
       </div>

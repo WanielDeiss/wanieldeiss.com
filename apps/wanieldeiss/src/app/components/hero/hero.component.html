@@ -20,9 +20,10 @@
       (mouseleave)="onPointerLeave()"
     >
       <span class="italic text-fg-muted">I am</span>
-      <span class="role-slot">
+      <span class="sr-only">Software Developer, Technical Lead, and more</span>
+      <span class="role-slot" aria-hidden="true">
         @if (leavingRole(); as leaving) {
-          <span class="role role--leaving" aria-hidden="true">{{ leaving }}</span>
+          <span class="role role--leaving">{{ leaving }}</span>
         }
         <span
           class="role"
@@ -42,7 +43,7 @@
     <div class="flex flex-wrap items-center gap-3">
       <a
         href="#contact"
-        class="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-fg-on-accent transition-colors hover:bg-accent-hover focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
+        class="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-fg-on-accent transition-all duration-300 hover:bg-accent-hover hover:scale-[1.02] hover:shadow-lg focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
       >
         Let's talk
         <svg
@@ -64,7 +65,7 @@
       <a
         href="/daniel-weiss-cv.pdf"
         download
-        class="inline-flex items-center gap-2 rounded-full border border-border-strong px-6 py-3 text-sm font-medium text-fg-strong transition-colors hover:border-fg-strong focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
+        class="group inline-flex items-center gap-2 rounded-full border border-border-strong px-6 py-3 text-sm font-medium text-fg-strong transition-colors hover:border-fg-strong focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
       >
         Download CV
         <svg
@@ -72,7 +73,7 @@
           fill="none"
           stroke="currentColor"
           stroke-width="1.75"
-          class="h-4 w-4"
+          class="h-4 w-4 transition-transform group-hover:translate-y-0.5"
           aria-hidden="true"
         >
           <path

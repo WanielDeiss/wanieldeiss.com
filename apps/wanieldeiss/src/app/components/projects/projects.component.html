@@ -1,5 +1,5 @@
 <wd-container size="page">
-  <wd-section-header index="04" title="Projects" />
+  <wd-section-header index="04" title="Projects" headingId="heading-projects" />
 
   <div class="grid gap-8 md:grid-cols-2">
     @for (project of projects; track project.title) {
@@ -11,32 +11,32 @@
         </h3>
         <p class="mt-2 text-fg-muted">{{ project.description }}</p>
 
-        <div class="mt-6 space-y-4">
+        <dl class="mt-6 space-y-4">
           <div>
-            <p
+            <dt
               class="text-xs font-medium uppercase tracking-[var(--tracking-eyebrow)] text-accent"
             >
               Problem
-            </p>
-            <p class="mt-1 text-sm text-fg-muted">{{ project.problem }}</p>
+            </dt>
+            <dd class="mt-1 text-sm text-fg-muted">{{ project.problem }}</dd>
           </div>
           <div>
-            <p
+            <dt
               class="text-xs font-medium uppercase tracking-[var(--tracking-eyebrow)] text-accent"
             >
               Solution
-            </p>
-            <p class="mt-1 text-sm text-fg-muted">{{ project.solution }}</p>
+            </dt>
+            <dd class="mt-1 text-sm text-fg-muted">{{ project.solution }}</dd>
           </div>
           <div>
-            <p
+            <dt
               class="text-xs font-medium uppercase tracking-[var(--tracking-eyebrow)] text-accent"
             >
               Impact
-            </p>
-            <p class="mt-1 text-sm text-fg-muted">{{ project.impact }}</p>
+            </dt>
+            <dd class="mt-1 text-sm text-fg-muted">{{ project.impact }}</dd>
           </div>
-        </div>
+        </dl>
 
         <div class="mt-5 flex flex-wrap gap-2">
           @for (tag of project.tags; track tag) {
@@ -53,15 +53,15 @@
             [href]="project.url"
             target="_blank"
             rel="noopener noreferrer"
-            class="focus-ring mt-5 inline-flex items-center gap-1.5 text-sm text-accent transition-colors hover:text-accent-hover"
+            class="group focus-ring mt-5 inline-flex items-center gap-1.5 text-sm text-accent transition-colors hover:text-accent-hover"
           >
-            View project
+            <span class="link-underline">View project</span>
             <svg
               viewBox="0 0 16 16"
               fill="none"
               stroke="currentColor"
               stroke-width="1.5"
-              class="h-3.5 w-3.5"
+              class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5"
               aria-hidden="true"
             >
               <path

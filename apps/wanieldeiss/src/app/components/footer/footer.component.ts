@@ -32,7 +32,7 @@ import { ContainerComponent } from '../../ui';
             href="https://github.com/WanielDeiss/wanieldeiss.com"
             target="_blank"
             rel="noopener noreferrer"
-            class="focus-ring inline-flex items-center gap-1.5 transition-colors hover:text-fg-strong"
+            class="focus-ring link-underline inline-flex items-center gap-1.5 transition-colors hover:text-fg-strong"
           >
             <lucide-icon
               name="github"

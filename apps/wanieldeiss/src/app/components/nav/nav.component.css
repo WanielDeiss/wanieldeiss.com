@@ -26,6 +26,10 @@
     visibility 0s linear 0s;
 }
 
+a[aria-current='location']::after {
+  transform: scaleX(1);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .mobile-panel {
     transition: none;

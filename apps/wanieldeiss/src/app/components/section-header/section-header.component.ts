@@ -30,6 +30,7 @@ import {
         <span>{{ title() }}</span>
       </p>
       <h2
+        [attr.id]="headingId() ?? null"
         class="font-display text-4xl font-light leading-[1.05] tracking-[var(--tracking-display)] text-fg-strong md:text-6xl"
       >
         {{ title() }}
@@ -43,4 +44,5 @@ import {
 export class SectionHeaderComponent {
   readonly index = input.required<string>();
   readonly title = input.required<string>();
+  readonly headingId = input<string>();
 }

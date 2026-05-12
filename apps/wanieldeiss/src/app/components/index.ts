@@ -9,3 +9,4 @@ export { SectionHeaderComponent } from './section-header/section-header.componen
 export { SkipLinkComponent } from './skip-link/skip-link.component';
 export { SocialIconBarComponent } from './social-icon-bar/social-icon-bar.component';
 export { StackComponent } from './stack/stack.component';
+export { KonamiComponent } from './konami/konami.component';

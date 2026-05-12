@@ -24,7 +24,7 @@ const KEY_FACTS: readonly KeyFact[] = [
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <wd-container size="page">
-      <wd-section-header index="01" title="About" />
+      <wd-section-header index="01" title="About" headingId="heading-about" />
 
       <div
         class="mt-12 grid gap-10 md:mt-16 md:grid-cols-[1fr_auto] md:items-start md:gap-16"
